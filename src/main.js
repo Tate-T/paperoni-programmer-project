@@ -1,3 +1,4 @@
+import "./our-js/header-modal.js"
 import "./our-js/header.js";
 import "./our-js/born-year.js";
 import "./our-js/guss-number.js";
@@ -11,5 +12,4 @@ import "./our-js/team.js";
 import "./our-js/scientists.js";
 import "./our-js/footer.js";
 import "./our-js/scroll-to-top.js";
-
 
