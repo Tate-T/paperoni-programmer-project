@@ -1,0 +1,27 @@
+.google-dinosaur {
+  position: relative;
+  padding: 36px 0;
+}
+
+.google-dinosaur-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.google-dinosaur-game {
+    height: 241px;
+    width: 720px;
+    background-color: grey;
+    margin: 36px auto 0;
+}
+
+.google-dinosaur-line {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 268px);
+  width: 536px;
+  height: 1px;
+  background-color: black;
+}
