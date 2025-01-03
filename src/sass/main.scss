@@ -1,3 +1,9 @@
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+@import "./base/reset";
+@import "./base/common";
+@import "./base/container";
 @import "./sections/header";
 @import "./sections/born-year";
 @import "./sections/guss-number";
