@@ -45,7 +45,7 @@ body {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: none;
-    width: 1090px;
+    width: 1110px;
   }
 }
 
@@ -218,4 +218,66 @@ body {
   width: 536px;
   height: 1px;
   background-color: black;
+}
+
+.footer {
+  padding: 61px 0;
+}
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 185px;
+}
+.footer-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 170%;
+}
+.footer-link {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 170%;
+}
+.footer-form {
+  margin-top: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  max-width: 344px;
+  flex-wrap: wrap;
+}
+.footer-input {
+  color: #7e7e7e;
+  font-size: 12px;
+  font-weight: 400;
+  width: 204px;
+  height: 35px;
+  border-radius: 20px;
+  padding: 10px 80px 10px 10px;
+  background: #d7d7d7;
+  border: none;
+}
+.footer-button {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 107px;
+  height: 35px;
+  border-radius: 20px;
+  background: #000;
+  margin-left: 33px;
+  cursor: pointer;
+}
+.footer-subtext {
+  color: #000;
+  font-size: 6px;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 18px;
+  margin-right: 89px;
 }/*# sourceMappingURL=main.css.map */
