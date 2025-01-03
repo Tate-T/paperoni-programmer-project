@@ -1,71 +1,70 @@
 .time-calculator {
   padding: 36px 0;
   position: relative;
-}
 
-.time-calculator-title {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: normal;
-}
+  &-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+  }
 
-.time-calculator-game {
-  @include flexbox;
-  gap: 33px;
-  margin-top: 36px;
-  margin-right: 72px;
-}
+  &-game {
+    @include flexbox;
+    gap: 33px;
+    margin-top: 36px;
+    margin-right: 72px;
+  }
 
-.time-calculator-input {
-  position: relative;
-  color: #7e7e7e;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: normal;
-  width: 150px;
-  padding: 10px 45px 10px 10px;
-  border-radius: 20px;
-  background: #d7d7d7;
-  border: none;
-  box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.25);
-}
+  &-input {
+    position: relative;
+    color: #7e7e7e;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    width: 150px;
+    padding: 10px 45px 10px 10px;
+    border-radius: 20px;
+    background: #d7d7d7;
+    border: none;
+    box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.25);
+  }
 
-.time-calculator-input::-webkit-inner-spin-button {
+  &-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
-}
+  }
 
-.time-calculator-wrap {
-  position: absolute;
-  top: 91.4px;
-  right: calc(50% + 82px);
-  width: 35px;
-  height: 34.6px;
-  border-radius: 0px 20px 20px 0px;
-  background: #000;
-  padding-top: 10px;
-  padding-left: 9px;
-  cursor: pointer;
-}
+  &-wrap {
+    position: absolute;
+    top: 91.4px;
+    right: calc(50% + 82px);
+    width: 35px;
+    height: 34.6px;
+    border-radius: 0px 20px 20px 0px;
+    background: #000;
+    padding-top: 10px;
+    padding-left: 9px;
+    cursor: pointer;
+  }
 
-.time-calculator-dotts {
-  width: 100px;
-  height: 0;
-  border: dashed black 0.5px;
-}
+  &-dotts {
+    width: 100px;
+    height: 0;
+    border: dashed black 0.5px;
+  }
 
-.time-calculator-result {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: normal;
-}
+  &-result {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
 
-.time-calculator-line {
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 268px);
-  width: 536px;
-  height: 1px;
-  background-color: black;
+  &-line {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 268px);
+    width: 536px;
+    height: 1px;
+    background-color: black;
+  }
 }
-
