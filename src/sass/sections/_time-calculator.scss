@@ -36,10 +36,16 @@
     }
   }
 
-  &-input:hover~&-wrap {
+  &-input:hover ~ &-wrap {
     @extend %hover;
-      border: none;
-      outline: solid black 1px;
+    border: none;
+    outline: solid black 1px;
+  }
+
+  &-input:hover ~ &-wrap &-magnifying-glass {
+    stroke: black;
+    fill: white;
+    transition: fill, stroke, $st-animation;
   }
 
   &-input::-webkit-inner-spin-button {
@@ -67,14 +73,25 @@
 
   &-input:has(+ .time-calculator-wrap:hover) {
     @extend %hover;
-      border: none;
-      outline: solid black 1px;
+    border: none;
+    outline: solid black 1px;
   }
 
-  &-wrap:hover~&-input {
+  &-wrap:hover ~ &-input {
     @extend %hover;
-      border: none;
-      outline: solid black 1px;
+    border: none;
+    outline: solid black 1px;
+  }
+
+  &-wrap:hover &-magnifying-glass {
+    stroke: black;
+    fill: white;
+    transition: fill, stroke, $st-animation;
+  }
+
+  &-magnifying-glass {
+    stroke: white;
+    transition: fill, stroke, $st-animation;
   }
 
   &-dotts {
@@ -97,4 +114,9 @@
     height: 1px;
     background-color: black;
   }
+}
+
+.sss {
+  // fill: red;
+  // stroke: red;
 }
