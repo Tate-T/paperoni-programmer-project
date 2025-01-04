@@ -46,4 +46,12 @@ body {
     max-width: none;
     width: 1090px;
   }
+}
+
+body {
+  background-color: darkmagenta;
+}
+
+.max-title {
+  color: deeppink;
 }/*# sourceMappingURL=main.css.map */
