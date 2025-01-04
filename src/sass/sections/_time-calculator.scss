@@ -36,6 +36,12 @@
     }
   }
 
+  &-input:hover~&-wrap {
+    @extend %hover;
+      border: none;
+      outline: solid black 1px;
+  }
+
   &-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
@@ -51,6 +57,12 @@
     padding-top: 10px;
     padding-left: 9px;
     cursor: pointer;
+
+    &:hover {
+      @extend %hover;
+      border: none;
+      outline: solid black 1px;
+    }
   }
 
   &-dotts {

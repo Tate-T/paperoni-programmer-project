@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.time-calculator-input:hover, .rock-paper-scissors-button:hover {
+.time-calculator-wrap:hover, .time-calculator-input:hover ~ .time-calculator-wrap, .time-calculator-input:hover, .rock-paper-scissors-button:hover {
   box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.25);
   color: black;
   background-color: #fff;
@@ -292,6 +292,10 @@ body {
   border: none;
   outline: solid black 1px;
 }
+.time-calculator-input:hover ~ .time-calculator-wrap {
+  border: none;
+  outline: solid black 1px;
+}
 .time-calculator-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
@@ -306,6 +310,10 @@ body {
   padding-top: 10px;
   padding-left: 9px;
   cursor: pointer;
+}
+.time-calculator-wrap:hover {
+  border: none;
+  outline: solid black 1px;
 }
 .time-calculator-dotts {
   width: 100px;
