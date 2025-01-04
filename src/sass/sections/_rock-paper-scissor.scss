@@ -42,6 +42,11 @@
     display: block;
     margin: 36px auto 0;
     cursor: pointer;
+    transition: box-shadow, color, background-color, border, $st-animation;
+
+    &:hover {
+      @extend %hover;
+    }
   }
 
   &-info {
