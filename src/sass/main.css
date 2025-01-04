@@ -1,0 +1,120 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat Alternates";
+}
+
+.container {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  outline: dotted red;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    max-width: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: none;
+    width: 1090px;
+  }
+}
+
+.rock-paper-scissors {
+  padding: 36px 0;
+  position: relative;
+}
+
+.rock-paper-scissors-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rock-paper-scissors-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 38px;
+  padding: 36px 0;
+}
+
+.rock-paper-scissors-item {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.rock-paper-scissors-text {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rock-paper-scissors-button {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  width: 182px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: black;
+  display: block;
+  margin: 36px auto 0;
+  cursor: pointer;
+}
+
+.rock-paper-scissors-info {
+  position: absolute;
+  top: 92px;
+  left: calc(50% + 230px);
+}
+
+.rock-paper-scissors-stats {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 170%;
+}
+
+.rock-paper-scissors-line {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 268px);
+  width: 536px;
+  height: 1px;
+  background-color: black;
+}/*# sourceMappingURL=main.css.map */
