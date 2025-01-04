@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
   text-decoration: none;
 }
@@ -197,6 +198,54 @@ body {
   width: 536px;
   height: 1px;
   background-color: black;
+}
+
+.section-calсulator {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-field {
+  color: #000000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 105px;
+  height: 35px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  gap: 0px;
+  background-color: #d7d7d7;
+  border: transparent;
+  filter: drop-shadow(3px 3px 0px rgba(0, 0, 0, 0.25));
+}
+
+.calсulator-list {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.calсulator-item {
+  width: 25px;
+  height: 25px;
+}
+
+.update-btn-calсulator {
+  color: white;
+  border-radius: 20px;
+  background: #000;
+  width: 25px;
+  height: 25px;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
 }
 
 .time-calculator {
