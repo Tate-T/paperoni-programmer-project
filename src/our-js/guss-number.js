@@ -1,7 +1,7 @@
-const formGus = document.querySelector(".guess-form")
-const inputGus = document.querySelector(".guess-input")
-const btnGus = document.querySelector(".guess-btn")
-const textGus = document.querySelector(".guess-text")
+const formGus = document.querySelector(".guess-number-form")
+const inputGus = document.querySelector(".guess-number-input")
+const btnGus = document.querySelector(".guess-number-btn")
+const textGus = document.querySelector(".guess-number-text")
 
 function randomNumber() {
     return Math.round(Math.random() * 100);
