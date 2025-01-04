@@ -201,6 +201,23 @@ body {
   background-color: black;
 }
 
+.max-number-title {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+.max-number-box-item {
+  color: #7E7E7E;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 20px;
+  background: #D7D7D7;
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+  width: 140px;
+  padding: 10px 20px;
+  align-items: center;
+}
+
 .footer {
   padding: 61px 0;
 }
