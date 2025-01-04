@@ -21,6 +21,12 @@
     padding: 10px;
     border-radius: 20px;
     background-color: black;
+    transition: box-shadow, color, background-color, border, $st-animation;
+    cursor: pointer;
+
+    &:hover {
+      @extend %hover;
+    }
   }
 
   &-text {
