@@ -1,5 +1,5 @@
-const inputs = document.querySelectorAll(".max-box-item");
-const maxText = document.querySelector(".max-text")
+const inputs = document.querySelectorAll(".max-number-box-item");
+const maxText = document.querySelector(".max-number-text")
 
 const maxList = [];
 console.log(maxList);
