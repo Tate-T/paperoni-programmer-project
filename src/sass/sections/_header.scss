@@ -1,0 +1,13 @@
+.header {
+
+    &-box {
+        @include flexbox($justify: start) ;
+        gap: 50px;
+    }
+
+    &-list {
+        @include flexbox;
+        gap: 50px;
+        margin-right: 270px;
+    }
+}
