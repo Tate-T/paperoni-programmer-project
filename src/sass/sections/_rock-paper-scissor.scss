@@ -1,0 +1,67 @@
+.rock-paper-scissors {
+  padding: 36px 0;
+  position: relative;
+
+  &-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &-list {
+    @include flexbox();
+    gap: 38px;
+    padding: 36px 0;
+  }
+
+  &-item {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+  }
+
+  &-text {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &-button {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    width: 182px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: black;
+    display: block;
+    margin: 36px auto 0;
+    cursor: pointer;
+  }
+
+  &-info {
+    position: absolute;
+    top: 92px;
+    left: calc(50% + 230px);
+  }
+
+  &-stats {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 170%;
+  }
+
+  &-line {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 268px);
+    width: 536px;
+    height: 1px;
+    background-color: black;
+  }
+}
