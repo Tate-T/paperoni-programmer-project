@@ -65,6 +65,18 @@
     }
   }
 
+  &-input:has(+ .time-calculator-wrap:hover) {
+    @extend %hover;
+      border: none;
+      outline: solid black 1px;
+  }
+
+  &-wrap:hover~&-input {
+    @extend %hover;
+      border: none;
+      outline: solid black 1px;
+  }
+
   &-dotts {
     width: 100px;
     height: 0;
