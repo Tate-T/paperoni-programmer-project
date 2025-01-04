@@ -1,6 +1,6 @@
 .guess-number {
     padding: 36px 0;
-    // position: relative;
+    position: relative;
 
     &-title {
         color: #000;
@@ -17,7 +17,7 @@
     }
 
     &-input {
-        position: relative;
+        // position: relative;
         color: #7e7e7e;
         font-size: 12px;
         font-weight: 400;
@@ -37,8 +37,8 @@
     &-wrap {
         position: absolute;
         top: 91px;
-        right: calc(50% + 224px);
-        // right: calc(50% + 395px);
+        // right: calc(50% + 224px);
+        right: calc(50% + 395px);
         // left: 245px;
         width: 35px;
         height: 35px;
