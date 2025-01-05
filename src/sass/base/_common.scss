@@ -7,3 +7,18 @@ body {
   font-family: 'Montserrat Alternates';
   // overflow: hidden;
 }
+
+.main {
+  background: url(../../img/background.png), linear-gradient(#EEEEEE, #EEEEEE);
+  background-size: cover;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: calc(50% - 555px);
+  z-index: 0;    
+  width: 1110px;
+  height: 2000px;
+  background-color: white;
+}
