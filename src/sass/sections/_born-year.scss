@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: 36px;
+  z-index: 1;
+  position: relative;
 }
 .born-div {
   display: flex;
@@ -59,3 +61,4 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
