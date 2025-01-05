@@ -1,7 +1,7 @@
 %hover {
-  box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.25);
   color: black;
-  background-color: #fff;
-  border: solid 1px grey;
-  transition: box-shadow, color, background-color, border, $st-animation;
+  background-color: #e7e7e7;
+  outline: solid black 1px;
+  transition: box-shadow, color, outline, background-color, $st-animation;
 }

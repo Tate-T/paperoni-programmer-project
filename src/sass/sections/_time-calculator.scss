@@ -9,11 +9,64 @@
     line-height: normal;
   }
 
+  &-subtitle {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 15px;
+  }
+
+  &-switch {
+    @include flexbox;
+    gap: 25px;
+    margin-top: 15px;
+  }
+
+  &-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &-ellipse {
+    width: 40px;
+    height: 20px;
+    border-radius: 11px;
+    background: #7a7a7a;
+    transition: box-shadow $st-animation;
+
+    &:hover {
+      box-shadow: 4px 5px 0px rgba(0, 0, 0, 0.25);
+      transition: box-shadow $st-animation;
+    }
+  }
+
+
+  &-cirkle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: solid 2px black;
+    cursor: pointer;
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    // transition: transform background-color $st-animation;
+
+    
+  }
+
+  &-cirkle-right {
+    transform: translate(20px);
+    transition: transform background-color $st-animation;
+  }
+
   &-game {
+    position: relative;
     @include flexbox;
     gap: 33px;
     margin-top: 36px;
-    margin-right: 72px;
+    margin-right: 92px;
   }
 
   &-input {
@@ -22,30 +75,23 @@
     font-size: 12px;
     font-weight: 400;
     line-height: normal;
-    width: 150px;
+    width: 170px;
     padding: 10px 45px 10px 10px;
     border-radius: 20px;
     background: #d7d7d7;
     border: none;
     box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: box-shadow, color, outline, background-color, $st-animation;
 
     &:hover {
       @extend %hover;
-      border: none;
-      outline: solid black 1px;
+      background-color: white;
     }
-  }
 
-  &-input:hover ~ &-wrap {
-    @extend %hover;
-    border: none;
-    outline: solid black 1px;
-  }
-
-  &-input:hover ~ &-wrap &-magnifying-glass {
-    stroke: black;
-    fill: white;
-    transition: fill, stroke, $st-animation;
+    &:focus {
+      @extend %hover;
+      background-color: white;
+    }
   }
 
   &-input::-webkit-inner-spin-button {
@@ -54,40 +100,31 @@
 
   &-wrap {
     position: absolute;
-    top: 91.4px;
-    right: calc(50% + 82px);
+    top: 0;
+    left: 433px;
     width: 35px;
     height: 34.6px;
     border-radius: 0px 20px 20px 0px;
     background: #000;
-    padding-top: 10px;
-    padding-left: 9px;
+    padding-top: 5px;
+    padding-left: 5px;
     cursor: pointer;
-
-    &:hover {
-      @extend %hover;
-      border: none;
-      outline: solid black 1px;
-    }
   }
 
   &-input:has(+ .time-calculator-wrap:hover) {
     @extend %hover;
-    border: none;
-    outline: solid black 1px;
+    background-color: white;
   }
 
   &-wrap:hover ~ &-input {
     @extend %hover;
-    border: none;
-    outline: solid black 1px;
   }
 
-  &-wrap:hover &-magnifying-glass {
-    stroke: black;
-    fill: white;
-    transition: fill, stroke, $st-animation;
-  }
+  // &-wrap:hover &-magnifying-glass {
+  //   stroke: black;
+  //   fill: #e7e7e7;
+  //   transition: fill, stroke, $st-animation;
+  // }
 
   &-magnifying-glass {
     stroke: white;
@@ -98,9 +135,13 @@
     width: 100px;
     height: 0;
     border: dashed black 0.5px;
+    margin-right: 100px;
   }
 
   &-result {
+    position: absolute;
+    top: 9.5px;
+    left: 630px;
     font-size: 12px;
     font-weight: 400;
     line-height: normal;
