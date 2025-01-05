@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: 36px;
+  z-index: 1;
+  position: relative;
 }
 .calculator-title {
   margin-left: 485px;
