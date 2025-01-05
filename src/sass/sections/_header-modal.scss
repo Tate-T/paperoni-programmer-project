@@ -20,9 +20,9 @@
     }
 
     &-btn-close {
-        width: 10px;
-        height: 10px;
-        background-color: blueviolet;
+        width: 30px;
+        height: 30px;
+        // background-color: blueviolet;
         position: absolute;
         top: 30px;
         right: 30px;
@@ -72,10 +72,30 @@
 
     &-icon-sword {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 154px;
+        left: 41px;
         width: 30px;
         height: 30px;
+    }
+
+    &-icon-puzzle {
+        position: absolute;
+        top: 230px;
+        left: 85px;
+        width: 30px;
+        height: 30px;
+    }
+
+    &-icon-game {
+        position: absolute;
+        top: 154px;
+        right: 41px;
+    }
+
+    &-icon-tic{
+        position: absolute;
+        top: 230px;
+        right: 85px;
     }
 }
 
@@ -85,6 +105,7 @@
     border-radius: 20px;
     background-color: chartreuse;
     position: relative;
+    z-index: 2;
 
     &-paragraf {
         padding-top: 83px;
@@ -100,5 +121,33 @@
         top: 30px;
         right: 30px;
         background-color: red;
+    }
+
+    &-icon-sword {
+        position: absolute;
+        top: 69px;
+        left: 43px;
+        width: 30px;
+        height: 30px;
+    }
+
+    &-icon-puzzle {
+        position: absolute;
+        top: 145px;
+        left: 87px;
+        width: 30px;
+        height: 30px;
+    }
+
+    &-icon-game {
+        position: absolute;
+        top: 69px;
+        right: 43px;
+    }
+
+    &-icon-tic{
+        position: absolute;
+        top: 145px;
+        right: 87px;
     }
 }
