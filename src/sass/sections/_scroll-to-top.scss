@@ -10,8 +10,6 @@
 
   &:hover {
     @extend %hover;
-    border: none;
-    outline: solid black 1px;
   }
 
   &:hover &-arrow-part1 {

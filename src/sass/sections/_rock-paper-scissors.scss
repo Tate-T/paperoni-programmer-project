@@ -21,12 +21,18 @@
     padding: 10px;
     border-radius: 20px;
     background-color: black;
-    transition: box-shadow, color, background-color, border, $st-animation;
+    transition: box-shadow, color, background-color, outline, $st-animation;
     cursor: pointer;
 
     &:hover {
       @extend %hover;
+      background-color: #aaaaaa;
     }
+  }
+
+  &-image {
+    width: 40px;
+    height: 40px;
   }
 
   &-text {
@@ -41,7 +47,7 @@
     font-size: 12px;
     font-weight: 400;
     line-height: normal;
-    width: 182px;
+    width: 242px;
     height: 35px;
     border-radius: 20px;
     background-color: black;

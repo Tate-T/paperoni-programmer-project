@@ -41,8 +41,6 @@
 
     &:hover {
       @extend %hover;
-      border: none;
-      outline: solid black 1px;
     }
   }
 
@@ -58,7 +56,7 @@
     background: #000;
     margin-left: 33px;
     cursor: pointer;
-    transition: box-shadow, color, background-color, border, $st-animation;
+    transition: box-shadow, color, background-color, outline, $st-animation;
 
     &:hover {
       @extend %hover;
