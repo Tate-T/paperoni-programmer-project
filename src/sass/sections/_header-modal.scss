@@ -1,10 +1,27 @@
+.header-modal-backdrop {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 4;
+}
+
 .header-modal {
+    position: fixed;
+    top: calc(100 - 50);
+    left: calc(100 - 50);
     width: 576px;
     height: 316px;
     background-color: darkorange;
     border-radius: 20px;
-    position: relative;
-    z-index: 2;
+    z-index: 3;
+
+
  
     &-paragraf {
         display: flex;
@@ -99,13 +116,28 @@
     }
 }
 
+.header-modal-sub-backdrop {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 4;
+}
+
 .header-modal-sub {
+    position: fixed;
+    top: calc(100 - 50);
+    left: calc(100 - 50);
     width: 463px;
     height: 245px;
     border-radius: 20px;
     background-color: chartreuse;
-    position: relative;
-    z-index: 2;
+    z-index: 4;
 
     &-paragraf {
         padding-top: 83px;
