@@ -14,8 +14,10 @@ btnGus.addEventListener("click", (event) => {
 
     if(result === randomNum) {
         textGus.textContent = `Вітаю ви відгадали число! ${randomNum}`
+        textGus.classList.toggle("guess-number-text-true")
     } else {
         textGus.textContent = `Ви програли, комп’ютер загадав ${randomNum}`
+        textGus.classList.toggle("guess-number-text-false")
     }
 
     inputGus.value = ""
