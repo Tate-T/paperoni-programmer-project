@@ -1,41 +1,43 @@
-<section class="calculator" >
-    <div class="container">
-        <div class="line"></div>
-        <h3 class="calculator-title">Калькулятор</h3>
-        <div class="section-calculator">
-    
-            
-        <input class="calculator-field" type="number" placeholder="Введіть число" id="counter-calculator1">
-        
-            <ul class="calculator-list">
-                <li class="calculator-item">
-                    <button id="plus-button" class="update-btn-calculator">
-                        +
-                    </button>
-                </li>
-                <li class="calculator-item">
-                    <button id="plus-umltiplate" class="update-btn-calculator">
-                        *
-                    </button>
-                </li>
-    
-                <li class="calculator-item">
-                    <button id="plus-minus" class="update-btn-calculator">
-                        -
-                    </button>
-                </li>
-                <li class="calculator-item">
-                    <button id="plus-divadet" class="update-btn-calculator">
-                        \
-                    </button>
-                </li>
-            </ul>
-        
-        <input class="calculator-field" type="number" placeholder="Введіть число" id="counter-calculator2">
-        <button id="button-equal" class="update-btn-calculator">
-            =
-        </button>
-        <p id="text-redult" class="calculator-field">Результат</p>
+<section class="calculator">
+  <div class="container">
+    <div class="line"></div>
+    <h3 class="calculator-title">Калькулятор</h3>
+    <div class="section-calculator">
+      <input
+        class="calculator-field"
+        type="text"
+        placeholder="Введіть число"
+        id="counter-calculator1"
+      />
+      <ul class="calculator-list">
+        <li class="calculator-item">
+          <button id="plus-button" class="update-btn-calculator">+</button>
+        </li>
+        <li class="calculator-item">
+          <button id="plus-umltiplate" class="update-btn-calculator">*</button>
+        </li>
+        <li class="calculator-item">
+          <button id="plus-minus" class="update-btn-calculator">-</button>
+        </li>
+        <li class="calculator-item">
+          <button id="plus-divadet" class="update-btn-calculator">/</button>
+        </li>
+      </ul>
+      <input
+        class="calculator-field"
+        type="text"
+        placeholder="Введіть число"
+        id="counter-calculator2"
+      />
+      <button id="button-equal" class="update-btn-calculator">=</button>
+      <input
+        id="text-result"
+        class="calculator-field"
+        type="text"
+        readonly
+        placeholder="Результат"
+      />
     </div>
-    </div>
+    <div class="hidden-width-measurer"></div>
+  </div>
 </section>
