@@ -4,17 +4,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    display: none; 
+    display: block; 
     justify-content: center; 
     align-items: center; 
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: 4;
 }
 
+.header-modal-backdrop-vision {
+    display: none;
+}
+
 .header-modal {
     position: fixed;
-    top: calc(100 - 50);
-    left: calc(100 - 50);
+    top: 35%;
+    left: 35%;
+    // top: calc(100 - 50);
+    // left: calc(100 - 50);
     width: 576px;
     height: 316px;
     background-color: darkorange;
@@ -129,10 +135,16 @@
     z-index: 4;
 }
 
+.header-modal-sub-backdrop-vision {
+    display: block;
+}
+
 .header-modal-sub {
     position: fixed;
-    top: calc(100 - 50);
-    left: calc(100 - 50);
+    top: 40%;
+    left: 38%;
+    // top: calc(100 - 50);
+    // left: calc(100 - 50);
     width: 463px;
     height: 245px;
     border-radius: 20px;
