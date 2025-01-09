@@ -4,6 +4,9 @@
   width: 150px;
   height: 150px;
 }
+.team {
+  padding-top: 36px;
+}
 .team-title {
   color: #000;
   font-family: 'Montserrat Alternates';
@@ -42,12 +45,26 @@
 }
 .team-line {
   position: absolute;
-  bottom: 0;
+  bottom: -36px; 
   left: calc(50% - 268px);
   width: 536px;
   height: 1px;
   background-color: black;
 }
+
+.team-block p, .team-name {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.team-block .fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.team-block .fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+
 .team-block p {
   font-size: 12px;
 }
