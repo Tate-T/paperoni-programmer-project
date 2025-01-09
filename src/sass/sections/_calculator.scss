@@ -8,13 +8,19 @@
 }
 .calculator-title {
   margin-left: 485px;
-  margin-buttom: 36px;
+  margin-bottom: 36px;
 }
 .section-calculator {
   display: flex;
   gap: 40px;
   justify-content: center;
   align-items: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .calculator-field {
