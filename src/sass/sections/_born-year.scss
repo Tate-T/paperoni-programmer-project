@@ -6,6 +6,18 @@
   z-index: 1;
   position: relative;
 }
+.born__year-input {
+  cursor: pointer;
+  &:hover {
+    @extend %hover;
+    background-color: white;
+  }
+
+  &:focus {
+    @extend %hover;
+    background-color: white;
+  }
+}
 .born-div {
   display: flex;
 }
