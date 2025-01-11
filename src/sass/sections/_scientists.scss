@@ -75,3 +75,6 @@
 .sort-list {
   display: flex;
 }
+.sort-list-item.active {
+  color: rgb(21, 212, 24); 
+}
