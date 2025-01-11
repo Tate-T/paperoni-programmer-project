@@ -36,15 +36,10 @@ function clearBoxes() {
     }
 }
 
-function addRotating() {
+function rotateBoxes() {
     for (let i of boxes) {
-        i.style.transform = "scaleX(-1)";
-    }
-}
-
-function removeRotating() {
-    for (let i of boxes) {
-        i.style.transform = "scaleX(1)";
+        i.style.transform = "scaleX(-1)"; // Початок обертання
+        setTimeout(() => i.style.transform = "scaleX(1)", 250); // Завершення обертання через 250мс
     }
 }
 
@@ -56,28 +51,26 @@ function zero(e) {
     if (on) {
         if (can) {
             filters[num].style.color = "white";
-        }
-        else {
+        } else {
             can = true;
         }
         e.currentTarget.style.color = "rgb(21, 212, 24)";
         num = 0;
         on = false;
-        addRotating();
+
+        rotateBoxes();
         setTimeout(clearBoxes, 250);
+
         setTimeout(() => {
-            removeRotating();
-            setTimeout(() => {
-                for (let scientist of scientists) {
-                    if (scientist.born >= 1801 && scientist.born <= 1900) {
-                        boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
-                        index++;
-                    }
+            for (let scientist of scientists) {
+                if (scientist.born >= 1801 && scientist.born <= 1900) {
+                    boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
+                    index++;
                 }
-                index = 0;
-            }, 250);
-            setTimeout(() => on = true, 1000);
-        }, 1000);
+            }
+            index = 0;
+            setTimeout(() => on = true, 500);
+        }, 500);
     }
 }
 
@@ -88,19 +81,18 @@ function one(e) {
         num = 1;
         on = false;
         localeSort(scientists, 'name');
-        addRotating();
+
+        rotateBoxes();
         setTimeout(clearBoxes, 250);
+
         setTimeout(() => {
-            removeRotating();
-            setTimeout(() => {
-                for (let scientist of scientists) {
-                    boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
-                    index++;
-                }
-                index = 0;
-            }, 250);
-            setTimeout(() => on = true, 1000);
-        }, 1000);
+            for (let scientist of scientists) {
+                boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
+                index++;
+            }
+            index = 0;
+            setTimeout(() => on = true, 500);
+        }, 500);
     }
 }
 
@@ -111,19 +103,18 @@ function two(e) {
         num = 2;
         on = false;
         scientists.sort((a, b) => (a.dead - a.born) - (b.dead - b.born));
-        addRotating();
+
+        rotateBoxes();
         setTimeout(clearBoxes, 250);
+
         setTimeout(() => {
-            removeRotating();
-            setTimeout(() => {
-                for (let scientist of scientists) {
-                    boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
-                    index++;
-                }
-                index = 0;
-            }, 250);
-            setTimeout(() => on = true, 1000);
-        }, 1000);
+            for (let scientist of scientists) {
+                boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
+                index++;
+            }
+            index = 0;
+            setTimeout(() => on = true, 500);
+        }, 500);
     }
 }
 
@@ -134,15 +125,14 @@ function three(e) {
         num = 3;
         on = false;
         scientists.sort((a, b) => b.born - a.born);
-        addRotating();
+
+        rotateBoxes();
         setTimeout(clearBoxes, 250);
+
         setTimeout(() => {
-            removeRotating();
-            setTimeout(() => {
-                boxes[0].innerHTML = `${scientists[0].name} ${scientists[0].surname} <br> ${scientists[0].born}-${scientists[0].dead}`;
-            }, 250);
-            setTimeout(() => on = true, 1000);
-        }, 1000);
+            boxes[0].innerHTML = `${scientists[0].name} ${scientists[0].surname} <br> ${scientists[0].born}-${scientists[0].dead}`;
+            setTimeout(() => on = true, 500);
+        }, 500);
     }
 }
 
@@ -153,15 +143,14 @@ function four(e) {
         num = 4;
         on = false;
         const obj = scientists.find((el) => el.name === "Альберт" && el.surname === "Ейнштейн");
-        addRotating();
+
+        rotateBoxes();
         setTimeout(clearBoxes, 250);
+
         setTimeout(() => {
-            removeRotating();
-            setTimeout(() => {
-                boxes[0].innerHTML = `${obj.name} ${obj.surname} <br> ${obj.born}-${obj.dead}`;
-            }, 250);
-            setTimeout(() => on = true, 1000);
-        }, 1000);
+            boxes[0].innerHTML = `${obj.name} ${obj.surname} <br> ${obj.born}-${obj.dead}`;
+            setTimeout(() => on = true, 500);
+        }, 500);
     }
 }
 
@@ -172,19 +161,18 @@ function five(e) {
         num = 5;
         on = false;
         const objs = scientists.filter((el) => el.surname.startsWith("С"));
-        addRotating();
+
+        rotateBoxes();
         setTimeout(clearBoxes, 250);
+
         setTimeout(() => {
-            removeRotating();
-            setTimeout(() => {
-                for (let scientist of objs) {
-                    boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
-                    index++;
-                }
-                index = 0;
-            }, 250);
-            setTimeout(() => on = true, 1000);
-        }, 1000);
+            for (let scientist of objs) {
+                boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
+                index++;
+            }
+            index = 0;
+            setTimeout(() => on = true, 500);
+        }, 500);
     }
 }
 
@@ -195,19 +183,18 @@ function six(e) {
         num = 6;
         on = false;
         const objs = scientists.filter((el) => el.name[0] !== "А");
-        addRotating();
+
+        rotateBoxes();
         setTimeout(clearBoxes, 250);
+
         setTimeout(() => {
-            removeRotating();
-            setTimeout(() => {
-                for (let scientist of objs) {
-                    boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
-                    index++;
-                }
-                index = 0;
-            }, 250);
-            setTimeout(() => on = true, 1000);
-        }, 1000);
+            for (let scientist of objs) {
+                boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
+                index++;
+            }
+            index = 0;
+            setTimeout(() => on = true, 500);
+        }, 500);
     }
 }
 
@@ -218,16 +205,15 @@ function seven(e) {
         num = 7;
         on = false;
         scientists.sort((a, b) => (a.dead - a.born) - (b.dead - b.born));
-        addRotating();
+
+        rotateBoxes();
         setTimeout(clearBoxes, 250);
+
         setTimeout(() => {
-            removeRotating();
-            setTimeout(() => {
-                boxes[0].innerHTML = `${scientists[0].name} ${scientists[0].surname} <br> ${scientists[0].born}-${scientists[0].dead}`;
-                boxes[1].innerHTML = `${scientists[scientists.length-1].name} ${scientists[scientists.length-1].surname} <br> ${scientists[scientists.length-1].born}-${scientists[scientists.length-1].dead}`;
-            }, 250);
-            setTimeout(() => on = true, 1000);
-        }, 1000);
+            boxes[0].innerHTML = `${scientists[0].name} ${scientists[0].surname} <br> ${scientists[0].born}-${scientists[0].dead}`;
+            boxes[1].innerHTML = `${scientists[scientists.length-1].name} ${scientists[scientists.length-1].surname} <br> ${scientists[scientists.length-1].born}-${scientists[scientists.length-1].dead}`;
+            setTimeout(() => on = true, 500);
+        }, 500);
     }
 }
 
@@ -238,18 +224,17 @@ function eight(e) {
         num = 8;
         on = false;
         const objs = scientists.filter((el) => el.name[0] === el.surname[0]);
-        addRotating();
+
+        rotateBoxes();
         setTimeout(clearBoxes, 250);
+
         setTimeout(() => {
-            removeRotating();
-            setTimeout(() => {
-                for (let scientist of objs) {
-                    boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
-                    index++;
-                }
-                index = 0;
-            }, 250);
-            setTimeout(() => on = true, 1000);
-        }, 1000);
+            for (let scientist of objs) {
+                boxes[index].innerHTML = `${scientist.name} ${scientist.surname} <br> ${scientist.born}-${scientist.dead}`;
+                index++;
+            }
+            index = 0;
+            setTimeout(() => on = true, 500);
+        }, 500);
     }
 }
