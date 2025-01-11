@@ -64,7 +64,7 @@ function autoResizeInput(input) {
 
   const updateWidth = () => {
     measurer.textContent = input.value || input.placeholder;
-    input.style.width = `${measurer.offsetWidth + 10}px`; // Додаємо запас
+    input.style.width = `${measurer.offsetWidth + 10}px`;
   };
 
   input.addEventListener('input', updateWidth);

@@ -56,7 +56,6 @@ function animateContent(isNext) {
   }, 500);
 }
 
-// Обробники кнопок
 left.addEventListener("click", () => {
   index = (index - 1 + members.length) % members.length; 
   animateContent(false);
