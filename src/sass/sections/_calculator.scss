@@ -17,10 +17,10 @@
   align-items: center;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .calculator-field {
@@ -33,7 +33,7 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 35px;
   padding: 0px 20px;
   display: flex;
-cursor: pointer;
+  cursor: pointer;
   align-items: center;
   border-radius: 20px;
   gap: 0px;
@@ -62,6 +62,8 @@ cursor: pointer;
 .calculator-item {
   width: 25px;
   height: 25px;
+  outline: none;
+  cursor: pointer;
 }
 
 .update-btn-calculator {
@@ -71,4 +73,23 @@ cursor: pointer;
   width: 25px;
   height: 25px;
   box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+  &:hover {
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25);
+    color: black;
+    background-color: #e7e7e7;
+    outline: solid black 1px;
+    transition: box-shadow, color, outline, background-color, $st-animation;
+    outline: none;
+    background-color: white;
+  }
+
+  &:focus {
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25);
+    color: black;
+    background-color: #e7e7e7;
+    outline: solid black 1px;
+    transition: box-shadow, color, outline, background-color, $st-animation;
+    outline: none;
+    background-color: white;
+  }
 }
