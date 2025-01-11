@@ -36,8 +36,8 @@ function setContent(index) {
 }
 
 function animateContent(isNext) {
-  const currentClass = isNext ? "fade-out" : "fade-in";
-  const nextClass = isNext ? "fade-in" : "fade-out";
+  const currentClass = isNext ? "fade-out-right" : "fade-out-left";
+  const nextClass = isNext ? "fade-in" : "fade-in";
 
   fullName.classList.add(currentClass);
   des.classList.add(currentClass);
@@ -57,12 +57,12 @@ function animateContent(isNext) {
 }
 
 left.addEventListener("click", () => {
-  index = (index - 1 + members.length) % members.length; 
+  index = (index - 1 + members.length) % members.length;
   animateContent(false);
 });
 
 right.addEventListener("click", () => {
-  index = (index + 1) % members.length; 
+  index = (index + 1) % members.length;
   animateContent(true);
 });
 
