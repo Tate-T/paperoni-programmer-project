@@ -5,6 +5,7 @@
   margin-top: 36px;
   z-index: 1;
   position: relative;
+  margin-bottom: 36px;
 }
 .calculator-title {
   margin-left: 485px;
@@ -92,4 +93,12 @@ input[type='number']::-webkit-outer-spin-button {
     outline: none;
     background-color: white;
   }
+}
+.calculator-line {
+    position: absolute;
+    bottom: -36px; 
+    left: calc(50% - 268px);
+    width: 536px;
+    height: 1px;
+    background-color: black;
 }
