@@ -1,8 +1,9 @@
 .calculator {
+  padding: 36px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 36px;
+  // margin-top: 36px;
   z-index: 1;
   position: relative;
 }

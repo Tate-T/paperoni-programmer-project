@@ -4,7 +4,7 @@
     z-index: 1;
 
     &-title {
-        color: #000;
+        // color: #000;
         font-size: 16px;
         font-weight: 400;
         line-height: normal;
@@ -62,4 +62,15 @@
     &-text-false {
         color: #900;
     }
+
+    &-line {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 268px);
+        width: 536px;
+        height: 1px;
+        background-color: black;
+      }
+    
+    
 }
