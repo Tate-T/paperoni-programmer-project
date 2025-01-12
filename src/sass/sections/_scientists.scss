@@ -78,3 +78,11 @@
 .scientists li:nth-child(4n) {
   margin-right: 0px;
 }
+.scientists-line {
+  position: absolute;
+  bottom: -36px; 
+  left: calc(50% - 268px);
+  width: 536px;
+  height: 1px;
+  background-color: black;
+}

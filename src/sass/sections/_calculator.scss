@@ -93,3 +93,11 @@ input[type='number']::-webkit-outer-spin-button {
     background-color: white;
   }
 }
+.calculator-line {
+    position: absolute;
+    bottom: -36px; 
+    left: calc(50% - 268px);
+    width: 536px;
+    height: 1px;
+    background-color: black;
+}
