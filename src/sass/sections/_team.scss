@@ -1,49 +1,42 @@
-.team-img {
+.team {
+  padding-top: 36px;
+  &-img {
   border-radius: 20px;
   background: #d9d9d9;
   width: 150px;
   height: 150px;
 }
-.team {
-  padding-top: 36px;
-}
-.team-title {
-  // color: #000;
-  font-family: 'Montserrat Alternates';
+
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin-left: 474px;
   margin-bottom: 36px;
 }
-.team-name {
-    // color: #000;
-    font-family: "Montserrat Alternates";
+
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-.team-block {
+&-block {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
 }
-.team-block ul {
+&-block ul {
   width: 100px;
   display: flex;
   flex-direction: row;
   gap: 5px;
 }
-.team-block li {
+&-block li {
   background-color: #e3e3e3;
   width: 25px;
   height: 4px;
   border-radius: 15%;
 }
-.team-line {
+&-line {
   position: absolute;
   bottom: -36px; 
   left: calc(50% - 268px);
@@ -52,23 +45,23 @@
   background-color: black;
 }
 
-.team-block p, .team-name {
+&-block p, &-name {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
-.team-block .fade-in {
+&-block .fade-in {
   opacity: 1;
   transform: translateY(0);
 }
-.team-block .fade-out {
+&-block .fade-out {
   opacity: 0;
   transform: translateY(-20px);
 }
 
 
-.team-block p {
+&-block p {
   font-size: 12px;
 }
-.team-btn {
+&-btn {
   cursor: pointer;
   width: 50px;
   height: 100px;
@@ -81,14 +74,104 @@
   top: 35%;
   right: 250px;
 }
-.team-btn:last-child {
+&-btn:last-child {
   background-image: url('../../img/arrow-right.png');
   transform: rotate(180deg);
   left: 250px;
+  top: 35%;
   cursor: pointer;
+}
+
+&-btn {
+  cursor: pointer;
+  width: 50px;
+  height: 100px;
+  background-image: url('../../img/arrow-right.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+&-btn:first-child {
+  left: 5%; 
+  transform: rotate(180deg) translateY(-50%);
+}
+
+&-btn:last-child {
+  right: 5%; 
+}
+
+@media (max-width: 768px) {
+  &-btn:first-child,
+  &-btn:last-child {
+    width: 40px; 
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  &-btn:first-child,
+  &-btn:last-child {
+    width: 30px; 
+    height: 60px;
+  }
+
+  &-btn:first-child {
+    left: 2%; 
+  }
+
+  &-btn:last-child {
+    right: 2%;
+  }
+}
+&-block p, &-name {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+&-block .fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+&-block .fade-out-right {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+&-block .fade-out-left {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
 }
 
 .team {
   position: relative;
   z-index: 1;
+}
+.team {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.fade-out-left {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.fade-out-right {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
 }
