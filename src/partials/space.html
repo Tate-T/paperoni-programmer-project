@@ -1,7 +1,27 @@
 <section class="space">
-    <div class="container">
-        <h2 class="space-title">Космічні загарбники</h2>
-        <canvas width="1085px" height="600px"></canvas>
+  <div class="container">
+    <h2 class="space-title">Космічні загарбники</h2>
+    <p class="space-intro">Управління</p>
+    <ul class="space-list">
+      <li class="space-item">A - вліво</li>
+      <li class="space-item">D - вправо</li>
+      <li class="space-item">W - стріляти</li>
+    </ul>
+    <p class="space-warn">!АНГЛІЙСЬКА МОВА!</p>
+    <div class="space-btn-container">
+      <button class="space-btn" id="startButton">Старт!</button>
     </div>
-    <!-- <div class="space-line"></div> -->
+
+    <div id="gameIconContainer" class="game-icon-container">
+      <img
+        src="../space-assets/start-icon.png"
+        alt="Game Icon"
+        class="game-icon"
+      />
+      <p class="game-title">★Space Invaders★</p>
+    </div>
+
+    <canvas width="1085px" height="600px" style="display: none"></canvas>
+    <div class="space-box"></div>
+  </div>
 </section>
