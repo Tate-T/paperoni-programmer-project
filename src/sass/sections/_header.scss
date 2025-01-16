@@ -4,13 +4,54 @@
 
     &-box {
         @include flexbox($justify: start) ;
-        gap: 50px;
+        gap: 10px;
+
+        @media screen and (min-width: 768px) {
+            gap: 20px;
+        }
+      
+        @media screen and (min-width: 1200px) {
+            gap: 50px;
+        }
+    }
+
+    &-logo {
+       display: none;
+        
+
+        @media screen and (min-width: 768px) {
+           display: block;
+          }
+        
+          @media screen and (min-width: 1200px) {
+            
+          }
     }
 
     &-list {
         @include flexbox;
-        gap: 50px;
-        margin-right: 200px;
+        gap: 10px;
+        
+
+        @media screen and (min-width: 768px) {
+            margin-right: 50px;
+          }
+        
+          @media screen and (min-width: 1200px) {
+            gap: 50px;
+            margin-right: 200px;
+          }
+    }
+
+    &-list-item {
+        font-size: 10px;
+        @media screen and (min-width: 768px) {
+            font-size: 12px;
+        }
+      
+        @media screen and (min-width: 1200px) {
+           
+        }
     }
 
     
@@ -30,7 +71,7 @@
         text-align: center;
         width: 160px;
         z-index: 999;
-        background-color: red;
+        // background-color: red;
     
 
     }
@@ -42,8 +83,8 @@
     }    
 
     &-dropdown-item {
-        color: #000;
-        font-size: 12px;
+        // color: #000;
+        font-size: 10px;
         font-weight: 400;
         line-height: normal;
         
@@ -52,6 +93,11 @@
         border-right: 1px solid #000;
         border-left: 1px solid #000;
         // background: #FFF;
+
+       
+        @media screen and (min-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     &-dropdown-item:hover {
@@ -105,4 +151,11 @@
         transition: transform background-color $st-animation;
       }
     
+      &-hello {
+        font-size: 10px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 12px;
+        }
+      }
 }
