@@ -140,10 +140,10 @@ class Grid {
   update() {
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
-    this.velocity.y = 0
+    this.velocity.y = 0;
     if (this.position.x + this.width >= canvas.width || this.position.x <= 0) {
       this.velocity.x = -this.velocity.x;
-      this.velocity.y = 30
+      this.velocity.y = 30;
     }
   }
 }
@@ -151,7 +151,7 @@ class Grid {
 // Створення об'єктів
 const player = new Player();
 const projectiles = [];
-const grids = [new Grid()];
+const grids = [];
 
 // Стан клавіш
 const keys = {
@@ -160,6 +160,8 @@ const keys = {
   space: { pressed: false },
 };
 
+let frames = 0;
+let randomInterval = (Math.random() * 500) + 500;
 // Анімація гри
 function animate() {
   requestAnimationFrame(animate);
@@ -201,6 +203,12 @@ function animate() {
     player.velocity.x = 0;
     player.rotation = 0;
   }
+
+  if (frames % randomInterval === 0) {
+    grids.push(new Grid());
+  }
+
+  frames++;
 }
 
 // Подія на кнопку старт
