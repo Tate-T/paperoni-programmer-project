@@ -21,25 +21,42 @@
     }
 
     &-form {
-        display: flex;
+        display: block;
         margin-top: 36px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+          }
+        
+          @media screen and (min-width: 1200px) {
+            font-size: 16px;
+          }
     }
 
     &-input {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
         color: #7e7e7e;
         font-size: 10px;
         font-weight: 400;
         line-height: normal;
-        width: 90px;
+        width: 120px;
         padding: 10px 25px 10px 10px;
         border-radius: 20px;
         background: #d7d7d7;
         border: none;
         box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.25);
+       
+        // margin-right: 150px;
 
         @media screen and (min-width: 768px) {
+            margin-right: 0;
+            margin-left: 0;
             font-size: 12px;
-            width: 110px;
+            width: 150px;
             padding: 10px 25px 10px 10px;
           }
         
@@ -52,13 +69,31 @@
 
     &-btn {
         margin-right: 150px;
+        // z-index: 2;
+        border-radius: 0px 20px 20px 0px;
+        background: #000;
+        position: absolute;
+        width: 35px;
+        height: 33px;
+        top: 85px;
+        right: calc(50% - 215px);
+
+        // top: 90px;
+        // // right: calc(50% + 224px);
+        // right: calc(80% - 70px);
+        
 
         @media screen and (min-width: 768px) {
-            margin-right: 150px;
+            // margin-right: 150px;
+            top: 90px;
+            right: calc(50% + 25px);
+            width: 35px;
+        height: 35px;
           }
         
           @media screen and (min-width: 1200px) {
-            margin-right: 550px;
+            top: 91px;
+            right: calc(50% + 245px);
           }
     }
 
@@ -69,17 +104,44 @@
 
     &-wrap {
         position: absolute;
-        top: 91px;
+        // top: 90px;
         // right: calc(50% + 224px);
-        right: calc(50% + 395px);
+        top: 84px;
+        right: calc(50% - 65px);
         // left: 245px;
         width: 35px;
         height: 35px;
-        border-radius: 0px 20px 20px 0px;
-        background: #000;
         padding-top: 10px;
         padding-left: 8px;
         cursor: pointer;
+
+        @media screen and (min-width: 768px) {
+            top: 90px;
+            right: calc(50% + 174px);
+          }
+        
+          @media screen and (min-width: 1200px) {
+            top: 91px;
+            right: calc(50% + 395px);
+          }
+    }
+
+    &-text {
+        text-align: center;
+        font-size: 12px;
+        margin-top: 20px;
+        
+
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+            text-align: start;
+            margin-left: 150px;
+          }
+        
+          @media screen and (min-width: 1200px) {
+            margin-left: 550px;
+
+          }
     }
 
     &-text-true {
