@@ -1,6 +1,7 @@
 .header {
   z-index: 1;
   position: relative;
+  padding: 36px 0;
 
     &-box {
         @include flexbox($justify: start) ;
