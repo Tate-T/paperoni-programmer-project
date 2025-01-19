@@ -12,17 +12,26 @@
 
   &-game {
     height: 241px;
-    width: 720px;
+    width: 280px;
     background-color: grey;
     margin: 36px auto 0;
+
+    @media screen and (min-width: 768px) {
+      width: 720px;
+    }
   }
 
   &-line {
     position: absolute;
     bottom: 0;
-    left: calc(50% - 268px);
-    width: 536px;
+    left: calc(50% - 125px);
+    width: 250px;
     height: 1px;
     background-color: black;
+
+    @media screen and (min-width: 768px) {
+      width: 536px;
+    left: calc(50% - 268px);
+    }
   }
 }
