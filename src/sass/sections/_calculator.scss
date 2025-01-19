@@ -7,7 +7,7 @@
   z-index: 1;
   position: relative;
   &-title {
-    margin-left: 485px;
+   text-align: center;
     margin-bottom: 36px;
   }
 
@@ -57,9 +57,13 @@
 
 .section-calculator {
   display: flex;
-  gap: 40px;
+  gap: 30px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+   @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
 }
 
 input[type='number']::-webkit-inner-spin-button,
@@ -96,7 +100,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 .calculator-line {
     position: absolute;
-    bottom: -36px; 
+  margin-top: 36px;
     left: calc(50% - 268px);
     width: 536px;
     height: 1px;
