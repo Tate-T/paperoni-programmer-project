@@ -1,45 +1,107 @@
 .footer {
-  padding: 61px 0;
+  padding: 35px 0;
   position: relative;
   z-index: 1;
 
+  @media screen and (min-width: 1200px) {
+  padding: 61px 0;
+    }
+
   &-container {
-    @include flexbox;
-    gap: 185px;
+    @include flexbox($justify: space-between);
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+  
+    @media screen and (min-width: 1200px) {
+    }
   }
 
-  &-text {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 170%;
+  &-logo {
+    height: 100px;
+    width: 200px;
+
+    @media screen and (min-width: 768px) {
+      height: 41px;
+      width: 140px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+    height: 70px;
+      width: 165px;
+    }
+  }
+
+  &-list {
+    @include flexbox();
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
   }
 
   &-link {
     color: #000;
-    font-size: 12px;
     font-weight: 400;
     line-height: 170%;
+    font-size: 12px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 10px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+    }
   }
 
   &-form {
-    margin-top: 36px;
     @include flexbox;
-    align-self: start;
-    max-width: 344px;
+    flex-direction: column;
     flex-wrap: wrap;
+    max-width: 344px;
+    gap: 10px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      gap: 0;
+      font-size: 10px;
+    max-width: 281px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+    max-width: 344px;
+    }
   }
 
   &-input {
     color: #7e7e7e;
-    font-size: 12px;
     font-weight: 400;
-    width: 204px;
-    height: 35px;
     border-radius: 20px;
-    padding: 10px 80px 10px 10px;
+    padding: 10px 0px 10px 10px;
     background: #d7d7d7;
     border: none;
     transition: box-shadow, color, background-color, outline, $st-animation;
+    font-size: 12px;
+      width: 204px;
+    height: 35px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 10px;
+      width: 150px;
+      height: 27px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+      width: 204px;
+    height: 35px;
+    }
 
     &:hover {
       @extend %hover;
@@ -48,17 +110,28 @@
 
   &-button {
     color: #fff;
-    font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 107px;
-    height: 35px;
     border-radius: 20px;
     background: #000;
-    margin-left: 33px;
     cursor: pointer;
     transition: box-shadow, color, background-color, outline, $st-animation;
+    font-size: 12px;
+    width: 107px;
+    height: 35px;
+
+    @media screen and (min-width: 768px) {
+    margin-left: 33px;
+      font-size: 10px;
+      width: 98px;
+      height: 27px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+      width: 107px;
+    height: 35px;
+    }
 
     &:hover {
       @extend %hover;
@@ -66,11 +139,23 @@
   }
 
   &-subtext {
+    font-size: 8px;
     // color: #000;
-    font-size: 6px;
     font-weight: 400;
     line-height: normal;
+    text-align: center;
+    max-width: 200px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 6px;
+      margin-top: 9px;
+      margin-right: 89px;
+      margin-top: 8px;
+      text-align: left;
+    }
+  
+    @media screen and (min-width: 1200px) {
     margin-top: 18px;
-    margin-right: 89px;
+    }
   }
 }

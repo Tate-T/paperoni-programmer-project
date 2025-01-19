@@ -3,6 +3,14 @@
   position: relative;
   z-index: 1;
 
+  &-container {
+    padding-bottom: 130px;
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 0;
+    }
+  }
+
   &-title {
     text-align: center;
     font-size: 16px;
@@ -13,7 +21,11 @@
   &-list {
     @include flexbox();
     gap: 38px;
-    padding: 36px 0;
+    padding: 156px 0 24px;
+
+    @media screen and (min-width: 768px) {
+      padding: 36px 0;
+    }
   }
 
   &-item {
@@ -58,9 +70,13 @@
     border-radius: 20px;
     background-color: black;
     display: block;
-    margin: 36px auto 0;
+    margin: 24px auto 0;
     cursor: pointer;
     transition: box-shadow, color, background-color, border, $st-animation;
+
+    @media screen and (min-width: 768px) {
+      margin: 36px auto 0;
+    }
 
     &:hover {
       @extend %hover;
@@ -69,8 +85,13 @@
 
   &-info {
     position: absolute;
-    top: 92px;
-    left: calc(50% + 230px);
+    top: 390px;
+    left: calc(50% - 60px);
+
+    @media screen and (min-width: 768px) {
+      top: 92px;
+      left: calc(50% + 230px);
+    }
   }
 
   &-stats {
@@ -99,12 +120,18 @@
 
   &-settings {
     position: absolute;
-    top: 92px;
-    right: calc(50% + 230px);
+    top: 70px;   
+     right: calc(50% - 46.5px);
     max-width: 93px;
-    @include flexbox($justify: start);
+    @include flexbox;
     flex-wrap: wrap;
     gap: 6px;
+
+    @media screen and (min-width: 768px) {
+      justify-content: start;
+      top: 92px;
+    right: calc(50% + 230px);
+    }
   }
 
   &-difficulty {
@@ -134,9 +161,14 @@
   &-line {
     position: absolute;
     bottom: 0;
-    left: calc(50% - 268px);
-    width: 536px;
+    left: calc(50% - 125px);
+    width: 250px;
     height: 1px;
     background-color: black;
+
+    @media screen and (min-width: 768px) {
+      width: 536px;
+    left: calc(50% - 268px);
+    }
   }
 }

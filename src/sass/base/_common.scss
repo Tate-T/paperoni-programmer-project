@@ -16,11 +16,21 @@ body {
 .background {
   position: fixed;
   top: 0;
-  left: calc(50% - 555px);
+  left: calc(50% - 150px);
+  width: 300px;
   z-index: 0;    
-  width: 1110px;
   height: 2000px;
   background-color: white;
+
+  @media screen and (min-width: 768px) {
+  left: calc(50% - 400px);
+    width: 800px;
+  }
+
+  @media screen and (min-width: 1200px) {
+  left: calc(50% - 555px);
+    width: 1110px;
+  }
 }
 
 .all-text-white{
@@ -85,4 +95,3 @@ body {
   background-color: black;
   border: solid 2px white;
 }
-

@@ -4,7 +4,7 @@
   z-index: 1;
 
   &-title {
-    text-align: center;
+    text-align: center; 
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
@@ -65,9 +65,21 @@
   &-game {
     position: relative;
     @include flexbox;
-    gap: 33px;
-    margin-top: 36px;
-    margin-right: 92px;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      padding-right: 195px;
+      margin-top: 36px;
+      gap: 33px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-right: 98px;
+    }
   }
 
   &-input {
@@ -102,7 +114,7 @@
   &-wrap {
     position: absolute;
     top: 0;
-    left: 433px;
+    left: calc(50% + 52px);
     width: 35px;
     height: 34.6px;
     border-radius: 0px 20px 20px 0px;
@@ -110,6 +122,10 @@
     padding-top: 5px;
     padding-left: 5px;
     cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      left: calc(50% - 112px);
+    }
   }
 
   &-input:has(+ .time-calculator-wrap:hover) {
@@ -121,12 +137,6 @@
     @extend %hover;
   }
 
-  // &-wrap:hover &-magnifying-glass {
-  //   stroke: black;
-  //   fill: #e7e7e7;
-  //   transition: fill, stroke, $st-animation;
-  // }
-
   &-magnifying-glass {
     stroke: white;
     transition: fill, stroke, $st-animation;
@@ -136,24 +146,41 @@
     width: 100px;
     height: 0;
     border: dashed black 0.5px;
-    margin-right: 100px;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 100px;
+        }
   }
 
   &-result {
     position: absolute;
-    top: 9.5px;
-    left: 630px;
+    top: 65px;
+    left: calc(50% - 63.2px);
     font-size: 12px;
     font-weight: 400;
     line-height: normal;
+
+    @media screen and (min-width: 768px) {
+      top: 9.5px;
+      left: calc(50% + 83px);
+      }
+    
+      @media screen and (min-width: 1200px) {
+    left: 630px;
+      }
   }
 
   &-line {
     position: absolute;
     bottom: 0;
-    left: calc(50% - 268px);
-    width: 536px;
+    left: calc(50% - 125px);
+    width: 250px;
     height: 1px;
     background-color: black;
+
+    @media screen and (min-width: 768px) {
+      width: 536px;
+    left: calc(50% - 268px);
+    }
   }
 }

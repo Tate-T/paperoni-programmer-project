@@ -1,13 +1,23 @@
 .scrolltop {
   position: fixed;
   bottom: 20px;
-  left: calc(50% + 550px);
-  width: 50px;
-  height: 50px;
+  left: calc(50% + 100px);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #000;
   transition: box-shadow, color, background-color, outline, $st-animation;
   z-index: 1;
+
+  @media screen and (min-width: 768px) {
+  left: calc(50% + 330px);
+  width: 50px;
+  height: 50px;
+  }
+
+  @media screen and (min-width: 1200px) {
+  left: calc(50% + 550px);
+  }
 
   &:hover {
     @extend %hover;
@@ -24,24 +34,36 @@
   }
 
   &-arrow-part1 {
-    width: 20px;
-    height: 3px;
+    width: 14px;
+    height: 2.5px;
     background-color: white;
     transform: rotate(-45deg);
     position: absolute;
-    top: 21px;
+    top: 18px;
     left: 9px;
     transition: background-color $st-animation;
+
+    @media screen and (min-width: 768px) {
+    top: 21px;
+      width: 20px;
+    height: 3px;
+      }
   }
 
   &-arrow-part2 {
-    width: 20px;
-    height: 3px;
+    width: 14px;
+    height: 2.5px;
     background-color: white;
     transform: rotate(45deg);
     position: absolute;
-    top: 21px;
+    top: 18px;
     right: 9px;
     transition: background-color $st-animation;
+
+    @media screen and (min-width: 768px) {
+    top: 21px;
+      width: 20px;
+    height: 3px;
+      }
   }
 }
