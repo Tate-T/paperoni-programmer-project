@@ -33,8 +33,7 @@
   }
   &-div {
     display: flex;
-    width: 576px;
-    margin-left: 140px;
+    margin-left: 70px;
     @media screen and (min-width: 768px) {
       margin-left: 0;
     }
@@ -129,10 +128,15 @@
   }
 }
 .born-year-line {
-  margin-top: 36px;
-  position: absolute;
-  left: calc(50% - 268px);
-  width: 536px;
-  height: 1px;
-  background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 125px);
+    width: 250px;
+    height: 1px;
+    background-color: black;
+
+    @media screen and (min-width: 768px) {
+      width: 536px;
+    left: calc(50% - 268px);
+    }
 }

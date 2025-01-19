@@ -100,9 +100,14 @@ input[type='number']::-webkit-outer-spin-button {
 }
 .calculator-line {
     position: absolute;
-  margin-top: 36px;
-    left: calc(50% - 268px);
-    width: 536px;
+    bottom: 0;
+    left: calc(50% - 125px);
+    width: 250px;
     height: 1px;
     background-color: black;
+
+    @media screen and (min-width: 768px) {
+      width: 536px;
+    left: calc(50% - 268px);
+    }
 }
