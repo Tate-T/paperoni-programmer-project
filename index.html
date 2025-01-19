@@ -2,68 +2,542 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/project-name/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAoCAYAAACIC2hQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJHSURBVHgB7ZgxchpBEEVfGR8AZ85MSiafgL2BdAP1DUTojPYJFBETOuQISETObCdQRHADdALW09rZEtgIZmcGUKBX1cXO0rP1t7tnpmshL1eciBZ5+eHsk7OfvHEKZ2tnbTKTO6IrZ5+pSuBxz//2At+cfXH2hwvQd3ZLJbDtr1ksFsvZbNb3PkoV7QEREf9AHn5TpX3s7JfdmM/nNu60Wi0TZy/Qc/bV2XdnTzTkI3l48Gbc2LUTOCjLks1mYyVQUAlcEUmuiBqFswlV2p/8eNXtdld+bCkvvc/JtrFjKFX93fpxZzgcltPpdGTXVCVhWG32/L2LcM3uArH0l/6+YVHs8waxSJrQjh8XnGh/3YfwktpjLPGrfwur0evI5wWjVBEqA3yvvN/9Eb+191MyobyIDImAeN9eoF8WsUozkcaYsMgbQgaxSnORhqV00sBfSBCrxIks/Jw7miFEiFXiRBr16RNz8ggNxCrxIg1L+ZJ4hACxSprItp87Jg3hgFglTaRxkzh/G2GPWCVdpHHP7rGZivCP2PqESE2ZHZkp9bmPek9+3peF9E234+ePyIeyJ9NCmlhht61LRTlQjkK82JGfl6ONUwLWjBAn1mpzQjpKg4UtNBMb2tYdQ4nYfYRwsXeEtXWHUBK2SCFMrKV8TTxKhn1cOC62aVu3jZLnsHlGeF1sQVxbB5lF1sjWQ7cZEN/W1SdiNpE1Bf8vmJS2riBtAQZTt3UjzkDKt6fC/z5wBlKE1ml75AykfHY0gSsSPiW+c0n+AiPA4Vv/LUGlAAAAAElFTkSuQmCC" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Coding Magic</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400&display=swap"
+      rel="stylesheet"
+    />
     
-    <script type="module" crossorigin src="/project-name/assets/index-99a6ec52.js"></script>
-    <link rel="stylesheet" href="/project-name/assets/index-66886d44.css">
+    <script type="module" crossorigin src="/project-name/assets/index-2c3d1fbc.js"></script>
+    <link rel="stylesheet" href="/project-name/assets/index-51b4c3a7.css">
   </head>
   <body>
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/project-name/assets/javascript-8dac5379.svg" alt="" />
-    </section>
+    <!-- body {
+      font-family: 'Montserrat Alternates', sans-serif;
+      font-weight: 400;
+    } -->
 
     <!-- Loads the specified .html file -->
-    <section class="vite-promo">
+    <div class="header-modal-backdrop">
+    <div class="header-modal header-modal-vision">
+        <button class="header-modal-btn-close">
+            <svg class="header-modal-icon-cross" width="30px" height="30px">
+                <use href="../img/symbol-defs.svg#cross"></use>
+            </svg>
+        </button>
+        <p class="header-modal-paragraf">
+            Привіт!Ви потрапили на сайт інтерактивних ігор та завдань
+            Надіємось, що вам сподобається і ви отримаєте позитивні емоції!
+            Бажаємо Вам гарно провести час!
+        </p>
+        <p class="header-modal-text">Введіть своє ім’я:</p>
+        <div class="header-modal-wrap">
+            <input type="text" placeholder="Ваше ім’я..." class="header-modal-input">
+            <button type="submit" class="header-modal-btn-save">Зберегти</button>    
+        </div>
+        
+         <img src="../img/sword.svg" alt="" class="header-modal-icon-sword" > 
+         <img src="../img/puzzle.svg" alt="" class="header-modal-icon-puzzle" >
+        <svg class="header-modal-icon-game" width="30px" height="30px">
+            <use href="../img/symbol-defs.svg#game"></use>
+        </svg>
+        <svg class="header-modal-icon-tic" width="30px" height="30px">
+            <use href="../img/symbol-defs.svg#tic-tac-toe"></use>
+        </svg>
+    </div>
+</div>
+
+
+
+<div class="header-modal-sub-backdrop">
+    <div class="header-modal-sub header-modal-sub-vision">
+        <button class="header-modal-sub-btn-close">
+            <svg class="header-modal-sub-icon-cross"  width="30px" height="30px">
+                <use href="../img/symbol-defs.svg#cross"></use>
+            </svg>
+        </button>
+        <p class="header-modal-sub-paragraf">Дякую за підписку!</p>
+    
+        <img src="../img/sword.svg" alt="" class="header-modal-sub-icon-sword" > 
+        <img src="../img/puzzle.svg" alt="" class="header-modal-sub-icon-puzzle" >
+       <svg class="header-modal-sub-icon-game" width="30px" height="30px">
+           <use href="../img/symbol-defs.svg#game"></use>
+       </svg>
+       <svg class="header-modal-sub-icon-tic" width="30px" height="30px">
+           <use href="../img/symbol-defs.svg#tic-tac-toe"></use>
+       </svg> 
+    </div>
+</div>
+
+
+    <header class="header">
+    <div class="container header-box">
+        <svg class="header-logo" width="93px" height="40px">
+            <use href="../img/symbol-defs.svg#logo"></use>
+          </svg>
+       <ul class="header-list">
+            <li class="header-list-item">
+                <div class="header-dropdown">
+                    <div class="header-wrap">
+                        <p class="header-dropdown-item-one">Інтерактив</p>
+                        <button class="header-dropdown-btn">
+                            <svg class="header-logo2" width="5px" height="9px">
+                                <use href="../img/symbol-defs.svg#arrow-down"></use>
+                              </svg>
+                        </button>
+                    </div>
+                    <ul class="header-dropdown-content">
+                        <li class="header-dropdown-item">
+                            <p>Числовий</p>
+                        </li>
+                        <li class="header-dropdown-item">
+                            <p>Ігровий</p>
+                        </li>
+                        <li class="header-dropdown-item">
+                            <p>Ознайомчий</p>
+                        </li>
+                        <li class="header-dropdown-item">
+                            <p>Без фільтрів</p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header-list-item">
+                <p>Наша команда</p>
+            </li>
+            <li class="header-list-item">
+                <p>Контакти</p>
+            </li>
+       </ul>
+        <div class="header-ellipse">
+            <div class="header-cirkle">
+                <img src="../img/sun.svg" alt="" class="header-cirkle-img">
+            </div>
+        </div>
+       <p class="header-hello">Вітаємо, User!</p>
+    </div>
+</header>
+    <main class="main">
+      <section class="main-title">
+    <div class="container">
+        <h1 class="main-title-title">Популярні інетрактивні ігри</h1>
+    <div class="main-title-line"></div>
+    </div>
+</section>
+      <!-- <section class="born-year">
   <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
+    <div class="line"></div>
+    <h3 class="born-year-title">Перевір в який рік ти народився</h3>
+    <div class="born-year-div">
+      <div class="born-div">
+        <input
+          class="born-year-input"
+          type="number"
+          placeholder="Введіть рік народження"
+          data-inputYear
+        
+        />
+
+        <button type="button" class="born-year-btn" data-btnYear>
+          <svg class="born-year-svg">
+            <use href="../img/symbol-defs.svg#magnifying-glass"></use>
+          </svg>
+        </button>
+           <p class="born-year-text" data-remove>Введіть рік</p>
+      </div>
+    </div>
+    <div class="born-year-line"></div>
+  </div>
+</section>
+ -->
+      <!-- <section class="guess-number">
+    <div class="container">
+        <h2 class="guess-number-title">Вгадай число, яке загадав комп’ютер</h2>
+        <div>
+            <div>
+                <form action="" class="guess-number-form">
+                    <input type="text" placeholder="Введіть число" class="guess-number-input">
+                    <button type="submit" class="guess-number-btn"></button>
+                        <span class="guess-number-wrap">
+                              <svg class="guess-number-search" width="15px" height="15px">
+                                <use href="../img/symbol-defs.svg#magnifying-glass"></use>
+                              </svg>
+                        </span>
+                    </button>
+                    <p class="guess-number-text">Ви програли, комп’ютер загадав (number)</p>
+                </form>
+            </div>
+        </div>
+        <div class="guess-number-line"></div>
+    </div>
+</section>
+ -->
+      <section class="rock-paper-scissors" id="rock-paper-scissors">
+  <div class="container rock-paper-scissors-container">
+    <h2 class="rock-paper-scissors-title">Камінь - ножиці - папір</h2>
+    <ul class="rock-paper-scissors-list">
+      <li class="rock-paper-scissors-item">
+        <img
+          class="rock-paper-scissors-image"
+          src="../img/rock.svg"
+          alt="rock"
+        />
+      </li>
+      <li class="rock-paper-scissors-item">
+        <img
+          class="rock-paper-scissors-image"
+          src="../img/scissors.svg"
+          alt="scissors"
+        />
+      </li>
+      <li class="rock-paper-scissors-item">
+        <img
+          class="rock-paper-scissors-image"
+          src="../img/paper.svg"
+          alt="paper"
+        />
+      </li>
+    </ul>
+    <p class="rock-paper-scissors-text">Почніть гру</p>
+    <button class="rock-paper-scissors-button" type="button">
+      Дізнатись вибір комп’ютера
+    </button>
+    <div class="rock-paper-scissors-info">
+      <p class="rock-paper-scissors-stats">Рахунок:</p>
+      <p class="rock-paper-scissors-stats">
+        Комп’ютер - <span class="rock-paper-scissors-pc">0</span>
       </p>
-
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
-          >
-        </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
-        </li>
-      </ul>
+      <p class="rock-paper-scissors-stats">
+        Ви - <span class="rock-paper-scissors-user">0</span>
+      </p>
+      <p class="rock-paper-scissors-stats">
+        Нічиї - <span class="rock-paper-scissors-tie">0</span>
+      </p>
+      <button type="button" class="rock-paper-scissors-update">Заново</button>
     </div>
-
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img
-        class="pic"
-        src="/project-name/assets/vite-logo-51249ca9.png"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      />
+    <div class="rock-paper-scissors-settings">
+      <p class="rock-paper-scissors-stats">Складність:</p>
+      <button class="rock-paper-scissors-difficulty">Легка</button>
+      <button
+        class="rock-paper-scissors-difficulty rock-paper-scissors-difficulty-hover"
+      >
+        Нормальна
+      </button>
+      <button class="rock-paper-scissors-difficulty">Неможлива</button>
     </div>
+    <div class="rock-paper-scissors-line"></div>
   </div>
 </section>
 
+      <!-- <section class="calculator">
+  <div class="container">
+    <div class="line"></div>
+    <h3 class="calculator-title">Калькулятор</h3>
+    <div class="section-calculator">
+      <input
+        class="calculator-field"
+        type="text"
+        placeholder="Введіть число"
+        id="counter-calculator1"
+      />
+      <ul class="calculator-list">
+        <li class="calculator-item">
+          <button id="plus-button" class="update-btn-calculator">+</button>
+        </li>
+        <li class="calculator-item">
+          <button id="plus-umltiplate" class="update-btn-calculator">*</button>
+        </li>
+        <li class="calculator-item">
+          <button id="plus-minus" class="update-btn-calculator">-</button>
+        </li>
+        <li class="calculator-item">
+          <button id="plus-divadet" class="update-btn-calculator">/</button>
+        </li>
+      </ul>
+      <input
+        class="calculator-field"
+        type="text"
+        placeholder="Введіть число"
+        id="counter-calculator2"
+      />
+      <button id="button-equal" class="update-btn-calculator">=</button>
+      <input
+        id="text-result"
+        class="calculator-field"
+        type="text"
+        readonly
+        placeholder="Результат"
+      />
+    </div>
+    <div class="hidden-width-measurer"></div>
+    <div class="calculator-line"></div>
+  </div>
+</section>
+ -->
+      <section class="time-calculator" id="time-calculator">
+  <div class="container">
+    <h2 class="time-calculator-title">Калькулятор часу</h2>
+    <p class="time-calculator-subtitle">Виберіть вхідні дані:</p>
+    <div class="time-calculator-switch">
+      <p class="time-calculator-text">Секунди</p>
+      <div class="time-calculator-ellipse">
+        <div class="time-calculator-cirkle"></div>
+      </div>
+      <p class="time-calculator-text">Хвилини</p>
+    </div>
+    <div class="time-calculator-game">
+      <input type="number" placeholder="Кількість секунд" class="time-calculator-input"/>
+      <button class="time-calculator-wrap" type="button">
+        <svg class="time-calculator-magnifying-glass" width="15px" height="15px">
+          <use href="../img/symbol-defs.svg#magnifying-glass"></use>
+        </svg>
+      </button>
+      <div class="time-calculator-dotts"></div>
+      <p class="time-calculator-result">0 дн. 0год. 0хв. 0сек.</p>
+    </div>
+    <div class="time-calculator-line"></div>
+  </div>
+</section>
+      <section class="google-dinosaur" id="google-dinosaur">
+  <div class="container">
+    <h2 class="google-dinosaur-title">Google динозавр</h2>
+    <div class="google-dinosaur-game"></div>
+    <!-- <canvas></canvas> -->
+    <div class="google-dinosaur-line"></div>
+  </div>
+</section>
+
+      <!-- 
+
+<section class="football">
+    <div class="container">
+        <h2 class="football-title">Футбол</h2>
+        <div class="football-box">
+            <div class="football-goal"></div>
+            <div class="football-ball"></div>
+        </div>
+        <div class="football-line"></div>
+        <div class="football-score">
+            Рахунок: <span id="score">0</span>
+        </div>
+    </div>
+</section> -->
+      <!-- <section class="max-number">
+    <div class="container">
+        <h2 class="max-number-title">Введіть 3 числа</h2>
+        <form class="max-number-form">
+            <input type="number" placeholder="Введіть число" class="max-number-box-item">
+            <input type="number" placeholder="Введіть число" class="max-number-box-item">
+            <input type="number" placeholder="Введіть число" class="max-number-box-item">
+        </form>
+        <p class="max-number-text">Найбільше число, яке ви ввели </p>
+        <div class="max-number-line"></div>
+    </div>
+</section> -->
+      <!-- <section class="team">
+  <div class="container">
+    <div class="team-line"></div>
+    <div class="line"></div>
+    <h3 class="team-title">Наша команда</h3>
+    <div class="team-block">
+      <img src="" alt="img" class="team-img" />
+      <h4 class="team-name" data-name>Ім'я студента</h4>
+      <p style="text-align: center" data-description>Інформація про роботу яку він виконав</p>
+      <ul>
+        <li
+          class="part"
+          style="width: 25px; background-color: rgb(134, 134, 134)"
+        ></li>
+        <li class="part"></li>
+        <li class="part"></li>
+      </ul>
+      <button class="team-btn" data-right></button>
+      <button class="team-btn" data-left></button>
+    </div>
+    <div class="team-line"></div>
+  </div>
+</section>
+ -->
+      <!-- <section id="scientists">
+  <div class="container">
+    <div class="line"></div>
+    <h3 class="scientists-title">Обери вченого/их</h3>
+    <ul class="scientists">
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+      <li class="scientist"></li>
+    </ul>
+    <div class="sort-list">
+      <ul>
+        <li>
+          <button class="sort-list-item">Які вчені народилися в 19 ст.</button>
+        </li>
+        <li>
+          <button class="sort-list-item">
+            Відсортувати вчених за алфавітом
+          </button>
+        </li>
+        <li>
+          <button class="sort-list-item">
+            Відсортувати вчених за кількістю прожитих років
+          </button>
+        </li>
+        <li>
+          <button class="sort-list-item">
+            Знайти вченого, який народився найпізніше
+          </button>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <button class="sort-list-item">
+            Знайти рік народження Альберт Ейнштейн
+          </button>
+        </li>
+        <li>
+          <button class="sort-list-item">
+            Знайти вчених, прізвища яких починаються на на літеру “С”
+          </button>
+        </li>
+        <li>
+          <button class="sort-list-item">
+            Видалити всіх вчених, ім’я яких починається на “А”
+          </button>
+        </li>
+        <li>
+          <button class="sort-list-item">
+            Знайти вченого, який прожив найдовше і вченого,<br />
+            який прожив найменше
+          </button>
+        </li>
+      </ul>
+    </div>
+    <p>
+      <button class="sort-list-item last">
+        Знайти вчених, в яких співпадають перші літери імені і прізвища
+      </button>
+    </p>
+    <div class="scientists-line"></div>
+  </div>
+</section>
+ -->
+      <!-- <section class="space">
+  <div class="container">
+    <h2 class="space-title">Космічні загарбники</h2>
+    <p class="space-intro">Управління</p>
+    <ul class="space-list">
+      <li class="space-item">A - вліво</li>
+      <li class="space-item">D - вправо</li>
+      <li class="space-item">W - стріляти</li>
+    </ul>
+    <p class="space-warn">!АНГЛІЙСЬКА МОВА!</p>
+    <div class="space-btn-container">
+      <button class="space-btn" id="startButton">Старт!</button>
+    </div>
+
+    <div id="gameIconContainer" class="game-icon-container">
+      <img
+        src="../space-assets/start-icon.png"
+        alt="Game Icon"
+        class="game-icon"
+      />
+      <p class="game-title">★Space Invaders★</p>
+    </div>
+
+    <canvas width="1085px" height="600px" style="display: none"></canvas>
+    <div class="space-box"></div>
+  </div>
+</section>
+ -->
+    </main>
+    <footer class="footer" id="footer">
+  <div class="container footer-container">
+    <a href="../index.html" class="footer-logo-link">
+      <svg class="footer-logo">
+        <use href="../img/symbol-defs.svg#logo"></use>
+      </svg>
+    </a>
+    <ul class="footer-list">
+      <li class="footer-item">
+        <a href="tel:+381235467890" class="footer-link"
+          >Тел: +38 (123) 456 78 90</a
+        >
+      </li>
+      <li class="footer-item">
+        <a href="mailto:codingmagic@gmail.com" class="footer-link"
+          >E-Mail: codingmagic@gmail.com</a
+        >
+      </li>
+      <li class="footer-item">
+        <a
+          href="https://www.facebook.com/?locale=uk_UA"
+          class="footer-link"
+          target="_blank"
+          >Facebook: CodingMagic</a
+        >
+      </li>
+      <li class="footer-item">
+        <a href="https://x.com/" class="footer-link" target="_blank"
+          >Twitter: CodingMagic</a
+        >
+      </li>
+      <li class="footer-item">
+        <a href="https://www.instagram.com/" class="footer-link" target="_blank"
+          >Instagram: CodingMagic</a
+        >
+      </li>
+    </ul>
+    <form action="" class="footer-form">
+      <input
+        type="email"
+        class="footer-input"
+        placeholder="Ваша ел. адреса..."
+        required
+      />
+      <button type="submit" class="footer-button">Підписатись</button>
+      <p class="footer-subtext">
+        *Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті
+      </p>
+    </form>
+  </div>
+</footer>
+
+    <a href="#top" class="scrolltop">
+    <div class="scrolltop-arrow-part1"></div>
+    <div class="scrolltop-arrow-part2"></div>
+</a>
+
+    <div class="background"></div>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
 
     
   </body>
