@@ -11,7 +11,7 @@ const btnClose = document.querySelector(".header-modal-btn-close")
 const btnSubClose = document.querySelector(".header-modal-sub-btn-close")
 
 btnSave.addEventListener("click", () => {
-    headerHello.textContent = `Вітаємо ${input.value}`
+    headerHello.textContent = `Вітаємо ${input.value} !`
 })
 
 btnClose.addEventListener("click", () => {
