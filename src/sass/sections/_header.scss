@@ -56,7 +56,6 @@
     }
 
     
-
     &-dropdown {
         position: relative;
         
@@ -89,8 +88,7 @@
         font-weight: 400;
         line-height: normal;
         
-
-        padding: 10px 49px;
+        padding: 5px 49px;
         border-right: 1px solid #000;
         border-left: 1px solid #000;
         // background: #FFF;
@@ -98,6 +96,7 @@
        
         @media screen and (min-width: 768px) {
             font-size: 12px;
+            padding: 10px 49px;
         }
     }
 
@@ -148,8 +147,11 @@
       }
     
       &-cirkle-right {
-        transform: translate(20px);
-        transition: transform background-color $st-animation;
+        
+        @media screen and (min-width: 768px) {
+            transform: translate(20px);
+            transition: transform background-color $st-animation;
+        }
       }
     
       &-hello {
