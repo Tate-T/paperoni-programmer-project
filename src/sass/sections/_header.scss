@@ -1,5 +1,5 @@
 .header {
-  z-index: 1;
+  z-index: 3;
   position: relative;
   padding: 36px 0;
 
@@ -66,12 +66,14 @@
         visibility: hidden; 
         transition: opacity 3s ease; 
         position: absolute;
-        
+        top: 30px;
+        left: -45px;
         list-style: none;
         text-align: center;
-        width: 160px;
-        z-index: 999;
-        // background-color: red;
+        width: 180px;
+        // z-index: 999;
+        
+        // background-color: aquamarine; 
     
 
     }
@@ -88,7 +90,7 @@
         font-weight: 400;
         line-height: normal;
         
-        padding: 5px 49px;
+        padding: 5px 35px;
         border-right: 1px solid #000;
         border-left: 1px solid #000;
         // background: #FFF;
@@ -96,7 +98,7 @@
        
         @media screen and (min-width: 768px) {
             font-size: 12px;
-            padding: 10px 49px;
+            padding: 10px 35px;
         }
     }
 
@@ -104,7 +106,7 @@
         background: #F1F1F1;
     }
 
-    &-dropdown-content li:nth-child(3) {
+    &-dropdown-content li:nth-child(4) {
         // border-bottom-left-radius: 50px;
         border-radius: 0px 0px 20px 20px;
         border-right: 1px solid #000;
@@ -116,6 +118,10 @@
 
     &-wrap {
         display: flex;
+    }
+
+    &-dropdown-btn {
+        background-color: transparent;
     }
 
 
