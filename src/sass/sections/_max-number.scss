@@ -75,11 +75,16 @@
     }
 
     &-line {
-        position: absolute;
-        bottom: 0;
-        left: calc(50% - 268px);
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 125px);
+      width: 250px;
+      height: 1px;
+      background-color: black;
+  
+      @media screen and (min-width: 768px) {
         width: 536px;
-        height: 1px;
-        background-color: black;
+      left: calc(50% - 268px);
+      }
       }
 }
