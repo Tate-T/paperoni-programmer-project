@@ -1,7 +1,7 @@
 #scientists {
   z-index: 1;
   position: relative;
-  padding-top: 36px;
+  padding-top: 72px;
   padding-bottom: 36px;
 }
 .scientists {
@@ -9,7 +9,9 @@
   flex-wrap: wrap;
   width: 577px;
   height: 408px;
-  margin-left: 257px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
   & li {
     width: 100px;
     height: 100px;
@@ -29,12 +31,57 @@
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
-    margin-left: 470px;
+    text-align: center;
     margin-bottom: 36px;
   }
 }
 
+@media screen and (max-width: 767px) {
+  .scientists {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  .scientists li {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+  }
+  .scientists li:nth-child(2n) {
+    margin-right: 0;
+  }
+  .sort-list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .sort-list ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .scientists {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
+  .scientists li {
+    width: calc(33.333% - 10px);
+    margin-right: 10px;
+  }
+  .scientists li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
 .sort-list {
+  display: flex;
   margin-left: 147px;
 }
 .sort-list ul {
@@ -61,13 +108,9 @@
   width: fit-content;
   font-size: 12px;
   line-height: normal;
-
   cursor: pointer;
 }
 
-.sort-list {
-  display: flex;
-}
 .sort-list-item.active {
   color: rgb(21, 212, 24);
 }
