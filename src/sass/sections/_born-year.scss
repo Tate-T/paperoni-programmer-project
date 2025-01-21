@@ -23,6 +23,7 @@
   &-title {
     margin-bottom: 36px;
     text-align: center;
+    
     @media screen and (min-width: 768px) {
       font-size: 14px;
     }
@@ -112,7 +113,10 @@
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    top: 93px;
+    top: 115px;
+      @media screen and (min-width: 350px) {
+      top: 89px;
+    }
     @media screen and (min-width: 768px) {
       top: 89px;
     }
