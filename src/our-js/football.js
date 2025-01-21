@@ -74,7 +74,7 @@ field.addEventListener("click", (event) => {
     
     if (checkGoal()) {
         score += 1; 
-        scoreDisplay.textContent = score; 
+        scoreDisplay.textContent = `Рахунок ${score}`; 
         resetBallPosition(); 
     }
 });
