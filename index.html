@@ -17,8 +17,8 @@
       rel="stylesheet"
     />
     
-    <script type="module" crossorigin src="/project-name/assets/index-007cd693.js"></script>
-    <link rel="stylesheet" href="/project-name/assets/index-c58fe4d0.css">
+    <script type="module" crossorigin src="/project-name/assets/index-30ae2802.js"></script>
+    <link rel="stylesheet" href="/project-name/assets/index-ab4eb3a8.css">
   </head>
   <body>
     <!-- body {
@@ -42,7 +42,8 @@
         <p class="header-modal-text">Введіть своє ім’я:</p>
         <div class="header-modal-wrap">
             <input type="text" placeholder="Ваше ім’я..." class="header-modal-input">
-            <button type="submit" class="header-modal-btn-save">Зберегти</button>    
+            <!-- <p class="error-message">Ви ввели менше ніж 3 символи</p> -->
+            <button type="submit" class="header-modal-btn-save">Зберегти</button>  
         </div>
         
          <img src="../img/sword.svg" alt="" class="header-modal-icon-sword" > 
@@ -165,7 +166,7 @@
         <div>
             <div>
                 <form action="" class="guess-number-form">
-                    <input type="text" placeholder="Введіть число" class="guess-number-input">
+                    <input type="number" placeholder="Введіть число" class="guess-number-input">
                     <button type="submit" class="guess-number-btn"></button>
                         <span class="guess-number-wrap">
                               <svg class="guess-number-search" width="15px" height="15px">
@@ -323,11 +324,15 @@
         <h2 class="football-title">Футбол</h2>
         <div class="football-box">
             <div class="football-goal"></div>
-            <div class="football-ball"></div>
+            <div class="football-ball">
+                <img src="../img/football.png" alt="ball">
+            </div>
         </div>
         <div class="football-line"></div>
         <div class="football-score">
-            Рахунок: <span id="score">0</span>
+            <p>
+                Рахунок: <span id="score">0</span>
+            </p>
         </div>
     </div>
 </section>
@@ -444,9 +449,9 @@
     <h2 class="space-title">Космічні загарбники</h2>
     <p class="space-intro">Управління</p>
     <ul class="space-list">
-      <li class="space-item">A - вліво</li>
-      <li class="space-item">D - вправо</li>
-      <li class="space-item">W - стріляти</li>
+      <li class="space-item"><p>A - вліво</p></li>
+      <li class="space-item"><p>D - вправо</p></li>
+      <li class="space-item"><p>W - стріляти</p></li>
     </ul>
     <p class="space-warn">!АНГЛІЙСЬКА МОВА!</p>
     <div class="space-btn-container">
