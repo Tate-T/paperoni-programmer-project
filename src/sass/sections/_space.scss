@@ -1,7 +1,7 @@
 .space {
   z-index: 1;
   position: relative;
-  padding-top: 36px;
+padding-top: 36px;
    
    
 }
@@ -96,6 +96,12 @@ canvas {
 #startButton {
   margin-top: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 1200px) { 
+    .space {
+        display: none;
+    }
 }
 
 // .space-line {
