@@ -1,5 +1,6 @@
 .team {
   padding-top: 36px;
+  padding-bottom: 36px;
   position: relative;
   z-index: 1;
   display: flex;
@@ -47,12 +48,17 @@
     border-radius: 15%;
   }
   &-line {
-    position: absolute;
-    bottom: -36px;
-    left: calc(50% - 268px);
-    width: 536px;
+      position: absolute;
+    bottom: 0;
+    left: calc(50% - 125px);
+    width: 250px;
     height: 1px;
     background-color: black;
+
+    @media screen and (min-width: 768px) {
+      width: 536px;
+    left: calc(50% - 268px);
+    }
   }
 
   &-block p,
