@@ -2,8 +2,8 @@
   z-index: 1;
   position: relative;
   padding-top: 36px;
-    @media screen and (min-width: 1200px) {
-  padding-bottom: 36px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 36px;
   }
 }
 .scientists {
@@ -84,7 +84,10 @@
 
 .sort-list {
   display: flex;
-  margin-left: 147px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 147px;
+  }
 }
 .sort-list ul {
   display: flex;
@@ -96,12 +99,18 @@
 
 .sort-list ul:first-child {
   margin-right: 36px;
-  align-items: end;
+  @media screen and (min-width: 768px) {
+    align-items: end;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: end;
+  }
 }
 .last {
-  margin-left: 150px;
-    @media screen and (min-width: 1200px) {
-margin-left: 300px;
+  margin-right: 50px;
+  margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 300px;
   }
 }
 .sort-list-item {
