@@ -59,7 +59,7 @@ class Projectile {
   constructor({ position, velocity }) {
     this.position = position;
     this.velocity = velocity;
-    this.radius = 3;
+    this.radius = 4;
   }
 
   draw() {
@@ -161,7 +161,7 @@ const keys = {
 };
 
 let frames = 0;
-let randomInterval = (Math.random() * 500) + 500;
+let randomInterval = Math.floor(Math.random() * 500 + 500);
 // Анімація гри
 function animate() {
   requestAnimationFrame(animate);
@@ -184,8 +184,30 @@ function animate() {
   // Оновлення ворогів у кожній сітці
   grids.forEach(grid => {
     grid.update();
-    grid.invaders.forEach(invader => {
+    grid.invaders.forEach((invader, i) => {
       invader.update({ velocity: grid.velocity });
+
+      projectiles.forEach((projectile, j) => {
+        if (
+          projectile.position.y - projectile.radius <=
+            invader.position.y + invader.height &&
+          projectile.position.y + projectile.radius >= invader.position.y &&
+          projectile.position.x + projectile.radius >= invader.position.x &&
+          projectile.position.x - projectile.radius <= invader.position.x + invader.width &&
+          projectile.position.y + projectile.radius >= invader.position.y
+        ) {
+          setTimeout(() => {
+            const invaderFound = grid.invaders.find((invader2) => 
+               invader2 === invader
+            );
+            const projectileFound = projectiles.find(projectile2 => projectile2 === projectile)
+            if (invaderFound && projectileFound) {
+              grid.invaders.splice(i, 1);
+              projectiles.splice(j, 1);
+            }
+          }, 0);
+        }
+      });
     });
   });
 
@@ -206,6 +228,8 @@ function animate() {
 
   if (frames % randomInterval === 0) {
     grids.push(new Grid());
+    frames = 0;
+    randomInterval = Math.floor(Math.random() * 500 + 500);
   }
 
   frames++;
