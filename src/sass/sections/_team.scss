@@ -1,6 +1,5 @@
 .team {
   padding-top: 36px;
-  padding-bottom: 36px;
   position: relative;
   z-index: 1;
   display: flex;
@@ -11,8 +10,16 @@
   &-img {
     border-radius: 20px;
     background: #d9d9d9;
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
+    @media screen and (min-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 150px;
+      height: 150px;
+    }
   }
   &-title {
     font-size: 16px;
@@ -41,16 +48,11 @@
   }
   &-line {
     position: absolute;
-    bottom: 0;
-    left: calc(50% - 125px);
-    width: 250px;
+    bottom: -36px;
+    left: calc(50% - 268px);
+    width: 536px;
     height: 1px;
     background-color: black;
-
-    @media screen and (min-width: 768px) {
-      width: 536px;
-      left: calc(50% - 268px);
-    }
   }
 
   &-block p,
@@ -79,42 +81,121 @@
     border: none;
     background-color: transparent;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 70px;
   }
-  &-btn:first-child {
-    left: 50%;
-    transform: translateX(-150%) rotate(180deg) translateY(-50%);
-  }
-
   &-btn:last-child {
-    left: 50%;
-    transform: translateX(50%) translateY(-50%);
-  }
-
-  @media (max-width: 768px) {
-    &-btn:first-child,
-    &-btn:last-child {
-      width: 40px;
-      height: 80px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    &-btn:first-child,
-    &-btn:last-child {
+    background-image: url('../../img/arrow-right.png');
+    transform: rotate(180deg);
+    left: 70px;
+    top: 36%;
+    cursor: pointer;
+    @media screen and (min-width: 768px) {
       width: 30px;
       height: 60px;
-    }
 
-    &-btn:first-child {
-      transform: translateX(-120%) rotate(180deg) translateY(-50%);
+      cursor: pointer;
+      background-image: url('../../img/arrow-right.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      top: 35%;
+      left: 150px;
+      transform: translateY(-50%);
+      transform: rotate(180deg);
     }
-
-    &-btn:last-child {
-      transform: translateX(20%) translateY(-50%);
+    @media screen and (min-width: 1200px) {
+      cursor: pointer;
+      width: 50px;
+      height: 100px;
+      background-image: url('../../img/arrow-right.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      top: 35%;
+      left: 250px;
+      transform: translateY(-50%);
+      transform: rotate(180deg);
     }
   }
+
+  &-btn {
+    // cursor: pointer;
+    width: 30px;
+    height: 60px;
+    background-image: url('../../img/arrow-right.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    @media screen and (min-width: 768px) {
+      cursor: pointer;
+      background-image: url('../../img/arrow-right.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      right: 150px;
+      transform: translateY(-50%);
+    }
+
+    @media screen and (min-width: 1200px) {
+      cursor: pointer;
+      width: 50px;
+      height: 100px;
+      background-image: url('../../img/arrow-right.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      top: 50%;
+      right: 250px;
+      transform: translateY(-50%);
+    }
+  }
+
+  // &-btn:first-child {
+  //   left: 5%;
+  //       top: 45%;
+  //   transform: rotate(180deg) translateY(-50%);
+  // }
+
+  // &-btn:last-child {
+  //   right: 5%;
+  //       top: 45%;
+  // }
+
+  // @media (max-width: 768px) {
+  //   &-btn:first-child,
+  //   &-btn:last-child {
+  //     width: 40px;
+  //     height: 80px;
+  //   }
+  // }
+
+  // @media (max-width: 480px) {
+  //   &-btn:first-child,
+  //   &-btn:last-child {
+  //     width: 30px;
+  //     height: 60px;
+  //   }
+
+  //   &-btn:first-child {
+  //     left: 2%;
+  //   }
+
+  //   &-btn:last-child {
+  //     right: 2%;
+  //   }
+  // }
   &-block p,
   &-name {
     opacity: 1;
@@ -138,6 +219,13 @@
   }
 }
 
+// .team {
+//   position: relative;
+//   z-index: 1;
+// }
+// .team {
+
+// }
 .fade-out-left {
   opacity: 0;
   transform: translateX(-100%);
