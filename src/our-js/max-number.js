@@ -5,7 +5,7 @@ const maxList = [];
 console.log(maxList);
 
 inputs.forEach(input => {
-    input.addEventListener("change", (event) => {
+    input.addEventListener("input", (event) => {
         const num = Number(event.target.value);
         maxList.push(num);
         

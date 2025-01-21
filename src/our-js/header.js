@@ -13,6 +13,7 @@ const allSection = document.querySelectorAll("section")
 const allText = document.querySelectorAll("p")
 const allHeader = document.querySelector("header")
 const allFoot = document.querySelector("footer")
+const allLink = document.querySelector("li")
 
 const allTitleH1 = document.querySelectorAll("h1")
 console.log(allTitleH1)
@@ -29,7 +30,7 @@ cirkle.addEventListener('click', event => {
     cirkle.classList.toggle('header-cirkle-right');
 
     if (cirkle.classList.contains('header-cirkle-right')) {
-      body.style.backgroundColor = "red"
+      // body.style.backgroundColor = "red"
       img.src = "../img/moon.svg"
       cirkle.style.backgroundColor ="black"
       elipse.style.backgroundColor = "#FFF"
@@ -41,6 +42,7 @@ cirkle.addEventListener('click', event => {
         text.classList.toggle("all-text-black")
       })
 
+
       allTitleH1.forEach(titleH1 => {
         titleH1.classList.toggle("all-title-white")
         titleH1.classList.toggle("all-title-black")
@@ -68,17 +70,19 @@ cirkle.addEventListener('click', event => {
       cirkleCalcul.classList.toggle(".all-circle-bg-white")
       cirkleCalcul.classList.toggle(".all-circle-bg-black")
 
-
+      allLink.forEach(link => {
+        link.classList.toggle(".all-link-white")
+        link.classList.toggle("all-link-black")
+      })
       
     } else {
       img
-       body.style.backgroundColor = "blue"
+      //  body.style.backgroundColor = "blue"
       img.src = "../img/sun.svg"
       cirkle.style.backgroundColor ="white"
       elipse.style.backgroundColor = "#7a7a7a"
 
       elipseCalcul.style.backgroundColor = "#7a7a7a"
-
 
 
       allText.forEach(text => {
@@ -111,5 +115,10 @@ cirkle.addEventListener('click', event => {
 
       cirkleCalcul.classList.toggle(".all-circle-bg-white")
       cirkleCalcul.classList.toggle(".all-circle-bg-black")
+
+      allLink.forEach(link => {
+        link.classList.toggle(".all-link-white")
+        link.classList.toggle("all-link-black")
+      })
     }
   });
