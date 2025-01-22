@@ -6,7 +6,7 @@ import "./our-js/guss-number.js";
 import "./our-js/rock-paper-scissors.js";
 import "./our-js/calculator.js";
 import "./our-js/time-calculator.js";
-import "./our-js/dragon-google.js";
+import "./our-js/dinosaur-google.js"; 
 import "./our-js/football.js";
 import "./our-js/max-number.js";
 import "./our-js/team.js";

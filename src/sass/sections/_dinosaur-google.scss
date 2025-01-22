@@ -1,4 +1,4 @@
-.google-dinosaur {
+.google-dino {
   position: relative;
   padding: 36px 0;
   z-index: 1;
@@ -11,14 +11,51 @@
   }
 
   &-game {
-    height: 241px;
+    position: relative;
+    display: flex;
+    height: 250px;
     width: 280px;
+    padding-top: 200px;
+    padding-left: 50px;
     background-color: grey;
     margin: 36px auto 0;
 
     @media screen and (min-width: 768px) {
       width: 620px;
     }
+  }
+
+  &-text {
+    position: absolute;
+    top: 110px;
+    left: 250px;
+    color: white;
+    font-size: 32px;
+    line-height: normal; 
+    opacity: 0;
+    transition: opacity $st-animation;
+  }
+
+  &-player {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    transition: transform 500ms cubic-bezier(.9,.61,.72,.51);
+
+    &-up {
+      transform: translate(0, -150px);
+      transition: transform 500ms cubic-bezier(.72,.78,.51,.63);
+    }
+  }
+
+  &-obs {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    top: 200px;
+    right: -50px;
+    transition: right 250ms cubic-bezier(.9,.61,.72,.51);
   }
 
   &-line {

@@ -2,9 +2,9 @@ const cirkle = document.querySelector('.time-calculator-cirkle');
 const input = document.querySelector('.time-calculator-input');
 const result = document.querySelector('.time-calculator-result');
 
-cirkle.addEventListener('click', event => {
-  event.target.classList.toggle('time-calculator-cirkle-right');
-  if (event.target.classList.contains('time-calculator-cirkle-right')) {
+document.querySelector('.time-calculator-ellipse').addEventListener('click', event => {
+  cirkle.classList.toggle('time-calculator-cirkle-right');
+  if (cirkle.classList.contains('time-calculator-cirkle-right')) {
     input.placeholder = 'Кількість хвилин';
     input.value = "";
     result.textContent = '0р. 0 дн. 0год. 0хв.';
