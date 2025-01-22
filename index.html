@@ -17,8 +17,8 @@
       rel="stylesheet"
     />
     
-    <script type="module" crossorigin src="/project-name/assets/index-30ae2802.js"></script>
-    <link rel="stylesheet" href="/project-name/assets/index-ab4eb3a8.css">
+    <script type="module" crossorigin src="/project-name/assets/index-b4d7ff9b.js"></script>
+    <link rel="stylesheet" href="/project-name/assets/index-3ac47af4.css">
   </head>
   <body>
     <!-- body {
@@ -113,10 +113,10 @@
                 </div>
             </li>
             <li class="header-list-item">
-                <p>Наша команда</p>
+                <a href="#team" class="header-link">Наша команда</a>
             </li>
             <li class="header-list-item">
-                <p>Контакти</p>
+                <a href="#footer" class="header-link">Контакти</a>
             </li>
        </ul>
         <div class="header-ellipse">
@@ -327,13 +327,17 @@
             <div class="football-ball">
                 <img src="../img/football.png" alt="ball">
             </div>
+            <div class="football-score">
+                <p>
+                    Рахунок: <span id="score">0</span>
+                </p>
+            </div>
+            <div class="football-end">
+                <p class="football-end-text">Гру завершено ви перемогли</p>
+                <button type="button" class="football-end-btn">ЗНОВУ</button>
+            </div>
         </div>
         <div class="football-line"></div>
-        <div class="football-score">
-            <p>
-                Рахунок: <span id="score">0</span>
-            </p>
-        </div>
     </div>
 </section>
       <section class="max-number">
@@ -348,7 +352,7 @@
         <div class="max-number-line"></div>
     </div>
 </section>
-      <section class="team">
+      <section class="team" id="team">
   <div class="container">
     <div class="team-line"></div>
     <div class="line"></div>
