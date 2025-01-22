@@ -20,9 +20,6 @@ const introductory = [
   document.querySelector('.team'),
   document.querySelector('#scientists'),
 ];
-console.log(numerical);
-console.log(playable);
-console.log(introductory);
 
 numericalBtn.addEventListener('click', event => {
   numerical.forEach(section => (section.style.display = 'block'));
