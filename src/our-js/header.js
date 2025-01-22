@@ -12,12 +12,11 @@ const allSection = document.querySelectorAll('section');
 const allText = document.querySelectorAll('p');
 const allHeader = document.querySelector('header');
 const allFoot = document.querySelector('footer');
-const allLink = document.querySelector('li');
+const allLink = document.querySelectorAll('a');
+console.log(allLink)
 
 const allTitleH1 = document.querySelectorAll('h1');
-console.log(allTitleH1);
 const allTitleH2 = document.querySelectorAll('h2');
-console.log(allTitleH2);
 const allTitleH3 = document.querySelectorAll('h3');
 
 dropdownBtn.addEventListener('click', () => {
@@ -67,8 +66,8 @@ cirkle.addEventListener('click', event => {
     cirkleCalcul.classList.toggle('.all-circle-bg-black');
 
     allLink.forEach(link => {
-      link.classList.toggle('all-title-white');
-      link.classList.toggle('all-title-black');
+      link.classList.toggle('all-link-white');
+      link.classList.toggle('all-link-black');
     });
   } else {
     img;

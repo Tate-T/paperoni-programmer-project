@@ -2,7 +2,6 @@ const inputs = document.querySelectorAll(".max-number-box-item");
 const maxText = document.querySelector(".max-number-text")
 
 const maxList = [];
-console.log(maxList);
 
 inputs.forEach(input => {
     input.addEventListener("input", (event) => {

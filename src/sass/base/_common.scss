@@ -14,12 +14,12 @@ body {
 }
 
 .background {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: calc(50% - 150px);
   width: 300px;
   z-index: 0;    
-  height: 2000px;
+  height: 4000px;
   background-color: white;
 
   @media screen and (min-width: 768px) {
