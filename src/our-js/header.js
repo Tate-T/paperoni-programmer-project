@@ -71,8 +71,8 @@ cirkle.addEventListener('click', event => {
       cirkleCalcul.classList.toggle(".all-circle-bg-black")
 
       allLink.forEach(link => {
-        link.classList.toggle(".all-link-white")
-        link.classList.toggle("all-link-black")
+        link.classList.toggle("all-title-white")
+        link.classList.toggle("all-title-black")
       })
       
     } else {
@@ -117,7 +117,7 @@ cirkle.addEventListener('click', event => {
       cirkleCalcul.classList.toggle(".all-circle-bg-black")
 
       allLink.forEach(link => {
-        link.classList.toggle(".all-link-white")
+        link.classList.toggle("all-link-white")
         link.classList.toggle("all-link-black")
       })
     }

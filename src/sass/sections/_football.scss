@@ -90,13 +90,17 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: red;
+  // top: 50px;
+  // left: 50px;
+  // background-color: red;
   border-radius: 50%;
   transition: 0.5s all ease;
 }
 
 .football-score {
   font-size: 12px;
+  margin-top: 20px;
+  text-align: center;
   
       @media screen and (min-width: 768px) {
         font-size: 14px;
@@ -105,4 +109,45 @@
     @media screen and (min-width: 1200px) {
         font-size: 16px;
     }
+}
+
+
+
+.football-end {
+position: absolute;
+top: 40px;
+left: 17%;
+// transform: translate(-50%, -50%);
+width: 200px;
+height: 300px;
+font-size: 14px;
+background-color: floralwhite;
+text-align: center;
+display: none;
+
+@media screen and (min-width: 330px) {
+  left: 30%;
+}
+
+@media screen and (min-width: 768px) {
+  width: 200px;
+  height: 300px;
+  left: 30%;
+}
+
+@media screen and (min-width: 1200px) {
+  width: 300px;
+  height: 400px;
+}
+}
+
+.football-end-text {
+  margin-top: 50px;
+  color: #5ABB58;
+}
+
+.football-end-btn {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: aquamarine;
 }
