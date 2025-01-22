@@ -11,12 +11,15 @@
             Бажаємо Вам гарно провести час!
         </p>
         <p class="header-modal-text">Введіть своє ім’я:</p>
-        <div class="header-modal-wrap">
-            <input type="text" placeholder="Ваше ім’я..." class="header-modal-input">
-            <!-- <p class="error-message">Ви ввели менше ніж 3 символи</p> -->
-            <button type="submit" class="header-modal-btn-save">Зберегти</button>  
-        </div>
-        
+        <form action="" class="header-modal-wrap">
+            <input
+              type="text"
+              class="header-modal-input"
+              placeholder="Ваше ім’я..."
+              required
+            />
+            <button type="submit" class="header-modal-btn-save">Зберегти</button>
+          </form>
          <img src="../img/sword.svg" alt="" class="header-modal-icon-sword" > 
          <img src="../img/puzzle.svg" alt="" class="header-modal-icon-puzzle" >
         <svg class="header-modal-icon-game" width="30px" height="30px">
