@@ -22,9 +22,15 @@ body {
   height: 4000px;
   background-color: white;
 
+  @media screen and (min-width: 480px) {
+    left: calc(50% - 240px);
+    width: 480px;
+  }
+
   @media screen and (min-width: 768px) {
-  left: calc(50% - 400px);
-    width: 800px;
+  left: calc(50% - 384px);
+    width: 768px;
+    height: 3500px;
   }
 
   @media screen and (min-width: 1200px) {
