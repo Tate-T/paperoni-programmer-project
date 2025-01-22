@@ -5,6 +5,10 @@ padding-top: 36px;
    
    
 }
+.space-score {
+  text-align: center;
+  margin-top: 10px;
+}
 .space-title {
   text-align: center;
   font-size: 20px;
@@ -97,6 +101,48 @@ canvas {
   margin-top: 20px;
   cursor: pointer;
 }
+.space-rest-btn {
+    margin-top: 20px;
+  cursor: pointer;
+}
+.game-over {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: rgb(224, 224, 224);
+  transition: opacity 1s linear;
+  pointer-events: none;
+}
+
+.game-over.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.game-over button {
+  width: 150px;
+  height: 50px;
+  font-family: "Montserrat Alternates";
+  border-radius: 8px;
+}
+.game-over button:hover {
+  background-color: rgb(255, 255, 255);
+}
+.game-over p {
+  width: 120px;
+  text-align: center;
+}
+
 
 @media (max-width: 1200px) { 
     .space {
