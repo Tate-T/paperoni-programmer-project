@@ -13,8 +13,14 @@ let isUp = false;
 let counter = 0;
 
 document.addEventListener('keydown', event => {
+  if (event.code === 'ArrowUp' || event.code === 'Space') {
+    event.preventDefault();
+  }
+});
+
+document.addEventListener('keydown', event => {
   if (isPlaying && readyToPlay) {
-    if (event.code === 'ArrowUp' && !isUp) {
+    if ((event.code === 'ArrowUp' || event.code === 'Space') && !isUp) {
       event.preventDefault();
       player.classList.add('google-dino-player-up');
       isUp = true;
@@ -34,7 +40,7 @@ let obsPosition2 = -500;
 let rewardPosition = -580;
 
 function incrementPosition(obstackle, interval, incrementValue) {
-  if (obsPosition <= 0 || obsPosition >= 650) {
+  if (obsPosition <= 0 || obsPosition >= 610) {
     obstackle.style.opacity = 0;
   } else {
     obstackle.style.opacity = 1;
@@ -62,7 +68,7 @@ function incrementPosition(obstackle, interval, incrementValue) {
 }
 
 function incrementTopPosition(obstackle, interval, incrementValue) {
-  if (obsPosition2 <= 0 || obsPosition2 >= 680) {
+  if (obsPosition2 <= 0 || obsPosition2 >= 640) {
     obstackle.style.opacity = 0;
   } else {
     obstackle.style.opacity = 1;
@@ -107,7 +113,7 @@ function incrementRewardPosition(obstackle, interval, incrementValue) {
         '<img class="google-dino-image" src="../img/coin.png" alt="dino">';
     }, 3000);
   }
-  if (rewardPosition >= 850) {
+  if (rewardPosition >= 730) {
     rewardPosition = -270;
     obstackle.style.zIndex = -1;
     setTimeout(function () {
