@@ -3,8 +3,8 @@ const canvas = document.querySelector('canvas');
 
 const c = canvas.getContext('2d');
 const startButton = document.getElementById('startButton');
-const gameIconContainer = document.getElementById('gameIconContainer'); // Контейнер іконки та назви гри
-const spaceBox = document.querySelector('.space-box'); // Знайдемо space-box
+const gameIconContainer = document.getElementById('gameIconContainer'); 
+const spaceBox = document.querySelector('.space-box'); 
 const gameOverScreen = document.querySelector('.game-over');
 const tryAgainButton = document.querySelector('.try-again');
 
@@ -16,9 +16,9 @@ function restartGame() {
   projectiles.length = 0;
   grids.length = 0;
   invaderProjectiles.length = 0;
-  particles.length = 0; // Очищаємо масив частинок
+  particles.length = 0; 
 
-  // Створюємо нові частинки
+  
   for (let i = 0; i < 100; i++) {
     particles.push(
       new Particle({
@@ -36,7 +36,7 @@ function restartGame() {
     );
   }
 
-  // Відновлюємо стан гравця
+
   player.position = {
     x: canvas.width / 2 - player.width / 2,
     y: canvas.height - player.height - 20,
@@ -50,24 +50,24 @@ function restartGame() {
 
   gameOverScreen.classList.remove('active');
 
-  // Створюємо нову сітку ворогів
+
   grids.push(new Grid());
 
-  animate(); // Запускаємо гру заново
+  animate(); 
 }
 
 tryAgainButton.addEventListener('click', restartGame);
 
-// Додаємо показ кнопки при програші
+
 function checkGameOver() {
   if (game.over) {
     setTimeout(showGameOverScreen, 1000);
   }
 }
 
-let gameStarted = false; // Прапор для перевірки, чи почалася гра
+let gameStarted = false; 
 
-// Клас для гравця
+
 class Player {
   constructor() {
     this.velocity = { x: 0, y: 0 };
@@ -117,7 +117,7 @@ class Player {
   }
 }
 
-// Клас для снарядів
+
 class Projectile {
   constructor({ position, velocity }) {
     this.position = position;
@@ -189,7 +189,7 @@ class InvaderProjectile {
   }
 }
 
-// Клас для ворогів
+
 class Invader {
   constructor({ position }) {
     this.velocity = { x: 0, y: 0 };
@@ -240,7 +240,6 @@ class Invader {
   }
 }
 
-// Клас для сітки ворогів
 class Grid {
   constructor() {
     this.position = { x: 0, y: 0 };
@@ -274,14 +273,14 @@ class Grid {
   }
 }
 
-// Створення об'єктів
+
 const player = new Player();
 const projectiles = [];
 const grids = [];
 const invaderProjectiles = [];
 const particles = [];
 
-// Стан клавіш
+
 const keys = {
   a: { pressed: false },
   d: { pressed: false },
@@ -332,12 +331,12 @@ function createParticles({ object, color, fades }) {
   }
 }
 
-// Анімація гри
+
 function animate() {
   if (!game.active) return;
   requestAnimationFrame(animate);
   c.fillStyle = 'black';
-  c.fillRect(0, 0, canvas.width, canvas.height); // Чорний фон
+  c.fillRect(0, 0, canvas.width, canvas.height); 
 
   player.update();
   particles.forEach((particle, i) => {
@@ -363,12 +362,12 @@ function animate() {
     if (
       invaderProjectile.position.y + invaderProjectile.height >=
         player.position.y &&
-      invaderProjectile.position.y <= player.position.y + player.height && // Додаємо верхню границю
+      invaderProjectile.position.y <= player.position.y + player.height && 
       invaderProjectile.position.x + invaderProjectile.width >=
         player.position.x &&
       invaderProjectile.position.x <= player.position.x + player.width
     ) {
-      playerHitSound.play(); // Відтворюємо звук, коли ворог потрапляє в гравця
+      playerHitSound.play(); 
       console.log('you lose');
       setTimeout(() => {
         invaderProjectiles.splice(index, 1);
@@ -387,7 +386,7 @@ function animate() {
       });
     }
   });
-  // Обробка снарядів
+ 
   projectiles.forEach((projectile, index) => {
     if (projectile.position.y + projectile.radius <= 0) {
       setTimeout(() => {
@@ -398,14 +397,14 @@ function animate() {
     }
   });
   const invaderShootSound = document.getElementById('invaderShootSound');
-  // Оновлення ворогів у кожній сітці
+
   grids.forEach((grid, gridIndex) => {
     grid.update();
     if (frames % 100 === 0 && grid.invaders.length > 0) {
       grid.invaders[Math.floor(Math.random() * grid.invaders.length)].shoot(
         invaderProjectiles
       );
-      invaderShootSound.play(); // Відтворюємо звук, коли ворог стріляє
+      invaderShootSound.play(); 
     }
     grid.invaders.forEach((invader, i) => {
       invader.update({ velocity: grid.velocity });
@@ -423,9 +422,9 @@ function animate() {
               projectile.position.x - projectile.radius <=
                 invader.position.x + invader.width
             ) {
-              hitSound.play(); // Відтворюємо звук, коли потрапляємо в ворога
+              hitSound.play(); 
               setTimeout(() => {
-                // Вилучаємо ворога та снаряд
+                
                 const invaderFound = grid.invaders.find(
                   invader2 => invader2 === invader
                 );
@@ -439,9 +438,9 @@ function animate() {
                   grid.invaders.splice(i, 1);
                   projectiles.splice(index, 1);
 
-                  // Перевіряємо, чи є ще вороги в сітці
+                 
                   if (grid.invaders.length === 0) {
-                    // Якщо всі вороги в сітці знищені, видаляємо сітку
+                   
                     grids.splice(gridIndex, 1);
                   }
                 }
@@ -453,7 +452,7 @@ function animate() {
     });
   });
 
-  // Управління рухом гравця
+ 
   if (keys.a.pressed && player.position.x >= 0) {
     player.velocity.x = -5;
     player.rotation = -0.15;
@@ -480,30 +479,29 @@ const startSound = document.getElementById('startSound');
 const backgroundMusic = document.getElementById('backgroundMusic');
 
 startButton.addEventListener('click', () => {
-  // Відтворюємо фонову музику
+ 
    startSound.play();
   backgroundMusic.play();
 
   gameStarted = true;
-  startButton.style.display = 'none'; // Сховати кнопку після натискання
-  gameIconContainer.style.display = 'none'; // Сховати іконку гри
-  spaceBox.style.display = 'none'; // Сховати space-box
-  canvas.style.display = 'block'; // Показати канвас
-  document.body.classList.add('game-started'); // Додаємо клас для старту гри
-  animate(); // Запуск анімації
+  startButton.style.display = 'none';
+  gameIconContainer.style.display = 'none'; 
+  spaceBox.style.display = 'none'; 
+  canvas.style.display = 'block';
+  document.body.classList.add('game-started'); 
+  animate(); 
 });
 
 const shootSound = document.getElementById('shootSound');
-let canShoot = true; // Прапор для контролю стрільби
-
+let canShoot = true; 
 addEventListener('keydown', ({ key }) => {
-  if (!gameStarted) return; // Якщо гра не почалась, не обробляємо натискання
-  if (game.over) return; // Якщо гра закінчена, не обробляємо натискання
+  if (!gameStarted) return; 
+  if (game.over) return;
 
   if (key === 'w' && canShoot) {
-    canShoot = false; // Забороняємо стрільбу, поки не відпустимо клавішу
+    canShoot = false; 
 
-    // Стрільба
+ 
     projectiles.push(
       new Projectile({
         position: {
@@ -516,10 +514,10 @@ addEventListener('keydown', ({ key }) => {
         },
       })
     );
-    shootSound.play(); // Відтворюємо звук при стрільбі
+    shootSound.play(); 
   }
 
-  // Управління рухом
+
   if (key === 'a') {
     keys.a.pressed = true;
   }
@@ -529,14 +527,14 @@ addEventListener('keydown', ({ key }) => {
 });
 
 addEventListener('keyup', ({ key }) => {
-  if (!gameStarted) return; // Якщо гра не почалась, не обробляємо відпускання
-  if (game.over) return; // Якщо гра закінчена, не обробляємо відпускання
+  if (!gameStarted) return; 
+  if (game.over) return; 
 
   if (key === 'w') {
-    canShoot = true; // Дозволяємо стріляти після відпускання клавіші w
+    canShoot = true; 
   }
 
-  // Управління рухом
+
   if (key === 'a') {
     keys.a.pressed = false;
   }
