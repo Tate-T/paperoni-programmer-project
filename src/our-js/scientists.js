@@ -98,8 +98,13 @@ function two(scientists) {
 }
 
 function three(scientists) {
-    return scientists.sort((a, b) => b.born - a.born);
+  let latestBorn = scientists.reduce(
+    (latest, scientist) => (scientist.born > latest.born ? scientist : latest),
+    scientists[0]
+  );
+  return [latestBorn]; // Повертаємо одного вченого в масиві
 }
+
 
 function four(scientists) {
     return scientists.filter(scientist => scientist.name === "Альберт" && scientist.surname === "Ейнштейн");
@@ -114,8 +119,12 @@ function six(scientists) {
 }
 
 function seven(scientists) {
-    return scientists.sort((a, b) => (a.dead - a.born) - (b.dead - b.born));
+  let sortedByLifespan = scientists.sort(
+    (a, b) => a.dead - a.born - (b.dead - b.born)
+  );
+  return [sortedByLifespan[0], sortedByLifespan[sortedByLifespan.length - 1]];
 }
+
 
 function eight(scientists) {
     return scientists.filter(scientist => scientist.name[0] === scientist.surname[0]);
