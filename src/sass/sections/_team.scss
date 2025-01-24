@@ -129,7 +129,7 @@
   }
 
   &-btn {
-    // cursor: pointer;
+
     width: 30px;
     height: 60px;
     background-image: url('../../img/arrow-right.png');
@@ -168,40 +168,6 @@
     }
   }
 
-  // &-btn:first-child {
-  //   left: 5%;
-  //       top: 45%;
-  //   transform: rotate(180deg) translateY(-50%);
-  // }
-
-  // &-btn:last-child {
-  //   right: 5%;
-  //       top: 45%;
-  // }
-
-  // @media (max-width: 768px) {
-  //   &-btn:first-child,
-  //   &-btn:last-child {
-  //     width: 40px;
-  //     height: 80px;
-  //   }
-  // }
-
-  // @media (max-width: 480px) {
-  //   &-btn:first-child,
-  //   &-btn:last-child {
-  //     width: 30px;
-  //     height: 60px;
-  //   }
-
-  //   &-btn:first-child {
-  //     left: 2%;
-  //   }
-
-  //   &-btn:last-child {
-  //     right: 2%;
-  //   }
-  // }
   &-block p,
   &-name {
     opacity: 1;
@@ -225,13 +191,7 @@
   }
 }
 
-// .team {
-//   position: relative;
-//   z-index: 1;
-// }
-// .team {
 
-// }
 .fade-out-left {
   opacity: 0;
   transform: translateX(-100%);

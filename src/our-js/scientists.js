@@ -22,7 +22,7 @@ const activeFilters = [];
 function applyFilters() {
     let filteredScientists = [...scientists];
 
-    // Пройдемо через всі активні фільтри і застосуємо їх до списку
+
     activeFilters.forEach(filter => {
         filteredScientists = filter(filteredScientists);
     });
@@ -48,8 +48,8 @@ function clearBoxes() {
 
 function rotateBoxes() {
     for (let i of boxes) {
-        i.style.transform = "scaleX(-1)"; // Початок обертання
-        setTimeout(() => i.style.transform = "scaleX(1)", 250); // Завершення обертання через 250мс
+        i.style.transform = "scaleX(-1)"; 
+        setTimeout(() => i.style.transform = "scaleX(1)", 250); 
     }
 }
 
@@ -58,23 +58,22 @@ function localeSort(array, key) {
 }
 
 function toggleFilter(e, filterFn) {
-    // Перевірка на наявність цього фільтру
+
     const isActive = activeFilters.includes(filterFn);
     
     if (isActive) {
-        // Якщо фільтр вже активний, вимикаємо його
-        activeFilters.splice(activeFilters.indexOf(filterFn), 1); // Видаляємо фільтр
-        e.currentTarget.classList.remove("active"); // Видаляємо клас активного
-    } else {
-        // Якщо фільтр не активний, додаємо його
-        activeFilters.push(filterFn); // Додаємо фільтр
-        e.currentTarget.classList.add("active"); // Додаємо клас активного
+   
+        activeFilters.splice(activeFilters.indexOf(filterFn), 1); 
+        e.currentTarget.classList.remove("active"); 
+   
+        activeFilters.push(filterFn); 
+        e.currentTarget.classList.add("active"); 
     }
 
     rotateBoxes();
     setTimeout(clearBoxes, 250);
 
-    // Застосуємо всі фільтри та оновимо виведення
+
     setTimeout(() => {
         let filteredScientists = applyFilters();
         index = 0;
@@ -102,7 +101,7 @@ function three(scientists) {
     (latest, scientist) => (scientist.born > latest.born ? scientist : latest),
     scientists[0]
   );
-  return [latestBorn]; // Повертаємо одного вченого в масиві
+  return [latestBorn];
 }
 
 

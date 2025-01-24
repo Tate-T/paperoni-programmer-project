@@ -1,15 +1,15 @@
 html {
   scroll-behavior: smooth;
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 body {
   font-family: 'Montserrat Alternates';
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 .main {
-  background: url(../../img/background.png), linear-gradient(#EEEEEE, #EEEEEE);
+  background: url(../../img/background.png), linear-gradient(#eeeeee, #eeeeee);
   background-size: cover;
 }
 
@@ -18,7 +18,7 @@ body {
   top: 0;
   left: calc(50% - 150px);
   width: 300px;
-  z-index: 0;    
+  z-index: 0;
   height: 4000px;
   background-color: white;
 
@@ -28,46 +28,46 @@ body {
   }
 
   @media screen and (min-width: 768px) {
-  left: calc(50% - 384px);
+    left: calc(50% - 384px);
     width: 768px;
     height: 3500px;
   }
 
   @media screen and (min-width: 1200px) {
-  left: calc(50% - 555px);
+    left: calc(50% - 555px);
     width: 1110px;
   }
 }
 
-.all-text-white{
+.all-text-white {
   color: #000;
 }
 
-.all-text-black{
-  color: #FFF;
+.all-text-black {
+  color: #fff;
 }
 
 .all-link-white {
-  color: #FFF;
+  color: #fff;
 }
 
 .all-link-black {
   color: #000;
 }
 
-.all-title-white{
+.all-title-white {
   color: #000;
 }
 
-.all-title-black{
-  color: #FFF;
+.all-title-black {
+  color: #fff;
 }
 
-.all-section-white{
+.all-section-white {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-  background: #FFF;
+  background: #fff;
 
   @media screen and (min-width: 768px) {
     width: 768px;
@@ -78,15 +78,13 @@ body {
     max-width: none;
     width: 1110px;
   }
-  
 }
 
 .all-section-black {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-  background: #8A8A8A;
-  
+  background: #8a8a8a;
 
   @media screen and (min-width: 768px) {
     width: 768px;
@@ -99,10 +97,9 @@ body {
   }
 }
 
-
 .all-circle-bg-white {
   background-color: white;
-    border: solid 2px black;
+  border: solid 2px black;
 }
 
 .all-circle-bg-black {
