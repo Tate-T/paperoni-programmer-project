@@ -95,6 +95,8 @@ function incrementTopPosition(obstackle, interval, incrementValue) {
   obstackle.style.right = `${obsPosition2}px`;
 }
 
+import imgUrl from '../img/coin.png'
+
 let poinTaken = false;
 function incrementRewardPosition(obstackle, interval, incrementValue) {
   if (rewardPosition <= 0 || rewardPosition >= 680) {
@@ -110,7 +112,7 @@ function incrementRewardPosition(obstackle, interval, incrementValue) {
     setTimeout(function () {
       poinTaken = false;
       obstackle.innerHTML =
-        '<img class="google-dino-image" src="/img/coin.png" alt="coin">';
+        `<img class="google-dino-image" src="${imgUrl}" alt="coin">`;
     }, 3000);
   }
   if (rewardPosition >= 730) {
