@@ -27,6 +27,7 @@ const members = [
   },
 ];
 
+
 function setContent(index) {
   fullName.textContent = members[index].name;
   des.innerHTML = members[index].description;
