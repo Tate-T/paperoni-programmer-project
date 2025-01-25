@@ -111,6 +111,14 @@ const scoreElement = document.getElementById("score");
 const messageBox = document.querySelector(".football-end")
 const restartGame = document.querySelector(".football-end-btn")
 
+const timerElem = document.querySelector(".football-timer")
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
 let score = 0;
 const maxScore = 5; 
 const initialPosition = { left: "20px", top: "20px" };
@@ -189,3 +197,27 @@ field.addEventListener("click", (event) => {
 });
  
 
+
+function startCountdown(seconds) {
+  let timeLeft = seconds;
+
+  function updateTimer() {
+      const minutes = Math.floor((timeLeft % 3600) / 60);
+      const seconds = timeLeft % 60;
+
+      timerElem.textContent = 
+          `${minutes}:${seconds}`;
+
+      if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          timerElem.textContent = "Час вийшов!";
+      }
+
+      timeLeft--;
+  }
+
+  updateTimer(); 
+  const timerInterval = setInterval(updateTimer, 1000);
+}
+
+console.log(startCountdown(30));
