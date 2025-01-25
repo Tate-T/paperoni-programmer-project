@@ -36,7 +36,7 @@
 
     position: relative;
     overflow: hidden;
-    cursor: url(./img/cursor.svg), pointer;
+    cursor: url(./../img/cursor.svg), pointer;
 
       @media screen and (min-width: 768px) {
         width: 480px;
