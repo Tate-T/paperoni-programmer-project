@@ -31,10 +31,13 @@ svg.addEventListener("click", (event) => {
 
     if(result === randomNum) {
         textGus.textContent = `Вітаю ви відгадали число! ${randomNum}`
-        textGus.classList.toggle("guess-number-text-true")
+        textGus.classList.add("guess-number-text-true");
+        textGus.classList.remove("guess-number-text-false");
     } else {
         textGus.textContent = `Ви програли, комп’ютер загадав ${randomNum}`
-        textGus.classList.toggle("guess-number-text-false")
+        textGus.classList.add("guess-number-text-false");
+        textGus.classList.remove("guess-number-text-true");
+
     }
 
     inputGus.value = ""
