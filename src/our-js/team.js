@@ -10,7 +10,7 @@ const members = [
   {
     name: 'Андрій Мальцев',
     description:
-      'Скрам-майстер, зробив секції: Калькулятор часу; Google динозавр; Камінь - ножиці - папір; Footer; Scroll To Top ',
+      'Скрам-майстер, зробив секції: Калькулятор часу; Google динозавр; Камінь - ножиці - папір; Footer; Scroll To Top',
     image: './img/team1.jpg',
   },
   {
@@ -26,6 +26,7 @@ const members = [
     image: './img/team3.jpg',
   },
 ];
+
 
 function setContent(index) {
   fullName.textContent = members[index].name;
