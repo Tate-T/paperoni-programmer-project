@@ -19,12 +19,18 @@
   }
 
   &-list {
+    width: 260px;
+    height: 130px;
+    margin-right: auto;
+    margin-left: auto;
     @include flexbox();
-    gap: 38px;
+    gap: 30px;
     padding: 156px 0 24px;
+    flex-wrap: wrap;
+    transition: padding, height, $st-animation;
 
     @media screen and (min-width: 768px) {
-      padding: 36px 0;
+      padding: 36px 0 0;
     }
   }
 
@@ -41,6 +47,16 @@
       @extend %hover;
       background-color: #aaaaaa;
     }
+  }
+
+  &-item:nth-child(4) {
+    transform: translate(0, -90px);
+    opacity: 0;
+  }
+
+  &-item:last-child {
+    transform: translate(0, -90px);
+    opacity: 0;
   }
 
   &-item-hover {

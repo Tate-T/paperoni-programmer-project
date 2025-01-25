@@ -74,7 +74,7 @@ class Player {
     this.rotation = 0;
     this.opacity = 1;
     const image = new Image();
-    image.src = '../../space-assets/spaceship.png';
+    image.src = './space-assets/spaceship.png';
     image.onload = () => {
       const scale = 0.15;
       this.image = image;
@@ -194,7 +194,7 @@ class Invader {
   constructor({ position }) {
     this.velocity = { x: 0, y: 0 };
     const image = new Image();
-    image.src = '../../space-assets/invader.png';
+    image.src = './space-assets/invader.png';
     image.onload = () => {
       const scale = 1;
       this.image = image;
@@ -433,6 +433,7 @@ function animate() {
                 );
                 if (invaderFound && projectileFound) {
                   score += 100;
+                  checkMaxScore();
                   scoreEl.innerHTML = score;
                   createParticles({ object: invader, fades: true });
                   grid.invaders.splice(i, 1);
@@ -541,4 +542,30 @@ addEventListener('keyup', ({ key }) => {
   if (key === 'd') {
     keys.d.pressed = false;
   }
-});
+});let maxScore = localStorage.getItem('maxScore') || 0; 
+
+
+function displayMaxScore() {
+  const maxScoreEl = document.querySelector('#maxScoreEl');
+  maxScoreEl.innerHTML = `Рекорд: ${maxScore}`;
+}
+
+
+window.addEventListener('load', displayMaxScore);
+
+
+function updateMaxScore() {
+  if (score > maxScore) {
+    maxScore = score;
+    localStorage.setItem('maxScore', maxScore);
+    displayMaxScore(); 
+  }
+}
+
+function checkMaxScore() {
+  updateMaxScore();
+  scoreEl.innerHTML = score;
+}
+
+
+checkMaxScore();
