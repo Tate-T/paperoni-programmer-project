@@ -4,7 +4,6 @@
   position: relative;
 
   &-title {
-    // color: #000;
     font-size: 12px;
     font-weight: 400;
     line-height: normal;
@@ -37,7 +36,7 @@
 
     position: relative;
     overflow: hidden;
-    cursor: url(../../img/cursor.svg), pointer;
+    cursor: url(./img/cursor.svg), pointer;
 
       @media screen and (min-width: 768px) {
         width: 480px;
