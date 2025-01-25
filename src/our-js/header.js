@@ -31,7 +31,7 @@ cirkle.addEventListener('click', event => {
 
   if (cirkle.classList.contains('header-cirkle-right')) {
     body.style.backgroundColor = '#8a8a8a';
-    img.src = imgUrl2;
+    img.src = '/img/moon.svg';
     cirkle.style.backgroundColor = 'black';
     elipse.style.backgroundColor = '#FFF';
 
@@ -78,7 +78,7 @@ cirkle.addEventListener('click', event => {
   } else {
     img;
      body.style.backgroundColor = "white"
-    img.src = imgUrl;
+    img.src = '/img/sun.svg';
     cirkle.style.backgroundColor = 'white';
     elipse.style.backgroundColor = '#7a7a7a';
 
