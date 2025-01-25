@@ -19,9 +19,6 @@ const allTitleH2 = document.querySelectorAll('h2');
 const allTitleH3 = document.querySelectorAll('h3');
 const headerDropdawn = document.querySelector(".header-dropdown-content")
 
-import imgUrl from '/img/sun.svg'
-import imgUrl2 from '/img/moon.svg'
-
 dropdownBtn.addEventListener('click', () => {
   dropdownList.classList.toggle('show');
 });
