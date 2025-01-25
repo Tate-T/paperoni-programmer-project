@@ -17,6 +17,7 @@ const allLink = document.querySelectorAll('a');
 const allTitleH1 = document.querySelectorAll('h1');
 const allTitleH2 = document.querySelectorAll('h2');
 const allTitleH3 = document.querySelectorAll('h3');
+const headerDropdawn = document.querySelector(".header-dropdown-content")
 
 import imgUrl from '../img/sun.svg'
 import imgUrl2 from '../img/moon.svg'
@@ -35,6 +36,9 @@ cirkle.addEventListener('click', event => {
     elipse.style.backgroundColor = '#FFF';
 
     elipseCalcul.style.backgroundColor = '#FFF';
+    // headerDropdawn.style.backgroundColor = '#FFF';
+    headerDropdawn.style.backgroundColor = '#8a8a8a';
+
 
     allText.forEach(text => {
       text.classList.toggle('all-text-white');
@@ -79,6 +83,9 @@ cirkle.addEventListener('click', event => {
     elipse.style.backgroundColor = '#7a7a7a';
 
     elipseCalcul.style.backgroundColor = '#7a7a7a';
+    // headerDropdawn.style.backgroundColor = '#7a7a7a';
+    headerDropdawn.style.backgroundColor = '#FFF';
+
 
     allText.forEach(text => {
       text.classList.toggle('all-text-white');
