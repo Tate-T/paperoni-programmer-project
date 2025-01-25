@@ -13,7 +13,6 @@ const allText = document.querySelectorAll('p');
 const allHeader = document.querySelector('header');
 const allFoot = document.querySelector('footer');
 const allLink = document.querySelectorAll('a');
-console.log(allLink)
 
 const allTitleH1 = document.querySelectorAll('h1');
 const allTitleH2 = document.querySelectorAll('h2');
