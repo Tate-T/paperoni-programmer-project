@@ -23,12 +23,15 @@ dropdownBtn.addEventListener('click', () => {
   dropdownList.classList.toggle('show');
 });
 
+import imgUrl from '/img/moon.svg'
+import imgUrl2 from '/img/sun.svg'
+
 cirkle.addEventListener('click', event => {
   cirkle.classList.toggle('header-cirkle-right');
 
   if (cirkle.classList.contains('header-cirkle-right')) {
     body.style.backgroundColor = '#8a8a8a';
-    img.src = '/img/moon.svg';
+    img.src = imgUrl;
     cirkle.style.backgroundColor = 'black';
     elipse.style.backgroundColor = '#FFF';
 
@@ -75,7 +78,7 @@ cirkle.addEventListener('click', event => {
   } else {
     img;
      body.style.backgroundColor = "white"
-    img.src = '/img/sun.svg';
+    img.src = imgUrl2;
     cirkle.style.backgroundColor = 'white';
     elipse.style.backgroundColor = '#7a7a7a';
 
