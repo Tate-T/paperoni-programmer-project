@@ -5,7 +5,6 @@ import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig(({ command }) => {
   return {
-    base: '/paperoni-programmer-project/',
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
