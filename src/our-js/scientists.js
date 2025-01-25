@@ -61,15 +61,21 @@ function toggleFilter(e, filterFn) {
 
     const isActive = activeFilters.includes(filterFn);
     
-    if (isActive) {
-   
-        activeFilters.splice(activeFilters.indexOf(filterFn), 1); 
-        e.currentTarget.classList.remove("active"); 
-   
-        activeFilters.push(filterFn); 
-        e.currentTarget.classList.add("active"); 
-    }
+     if (isActive) {
+    
+       activeFilters.splice(activeFilters.indexOf(filterFn), 1); 
+       e.currentTarget.classList.remove('active'); 
+     } else {
+      
+       activeFilters.push(filterFn); 
+       e.currentTarget.classList.add('active'); 
 
+       activeFilters.splice(activeFilters.indexOf(filterFn), 1);
+       e.currentTarget.classList.remove('active');
+
+       activeFilters.push(filterFn);
+       e.currentTarget.classList.add('active');
+     }
     rotateBoxes();
     setTimeout(clearBoxes, 250);
 
@@ -96,13 +102,13 @@ function two(scientists) {
     return scientists.sort((a, b) => (a.dead - a.born) - (b.dead - b.born));
 }
 
-function three(scientists) {
-  let latestBorn = scientists.reduce(
-    (latest, scientist) => (scientist.born > latest.born ? scientist : latest),
-    scientists[0]
-  );
-  return [latestBorn];
-}
+// function three(scientists) {
+//   let latestBorn = scientists.reduce(
+//     (latest, scientist) => (scientist.born > latest.born ? scientist : latest),
+//     scientists[0]
+//   );
+//   return [latestBorn];
+// }
 
 
 function four(scientists) {
@@ -125,6 +131,6 @@ function seven(scientists) {
 }
 
 
-function eight(scientists) {
-    return scientists.filter(scientist => scientist.name[0] === scientist.surname[0]);
-}
+// function eight(scientists) {
+//     return scientists.filter(scientist => scientist.name[0] === scientist.surname[0]);
+// }
