@@ -11,6 +11,8 @@ const reset = function () {
   buttons[0].classList.remove('rock-paper-scissors-item-hover');
   buttons[1].classList.remove('rock-paper-scissors-item-hover');
   buttons[2].classList.remove('rock-paper-scissors-item-hover');
+  buttons[3].classList.remove('rock-paper-scissors-item-hover');
+  buttons[4].classList.remove('rock-paper-scissors-item-hover');
 };
 
 const difficulties = document.querySelectorAll(
@@ -19,6 +21,7 @@ const difficulties = document.querySelectorAll(
 const buttons = document.querySelectorAll('.rock-paper-scissors-item');
 const resultBtn = document.querySelector('.rock-paper-scissors-button');
 const resultText = document.querySelector('.rock-paper-scissors-text');
+const list = document.querySelector('.rock-paper-scissors-list');
 let userChoice = 0;
 let difficulty = 2;
 
@@ -27,22 +30,55 @@ difficulties[0].addEventListener('click', event => {
   difficulties[0].classList.add('rock-paper-scissors-difficulty-hover');
   difficulties[1].classList.remove('rock-paper-scissors-difficulty-hover');
   difficulties[2].classList.remove('rock-paper-scissors-difficulty-hover');
+  difficulties[3].classList.remove('rock-paper-scissors-difficulty-hover');
+  buttons[3].style.opacity = 0;
+  buttons[3].style.transform = `translate(0, -90px)`;
+  buttons[4].style.opacity = 0;
+  buttons[4].style.transform = `translate(0, -90px)`;
+  list.style.padding = '36px 0 0';
+  list.style.height = '130px';
   reset();
 });
-
 difficulties[1].addEventListener('click', event => {
   difficulty = 2;
   difficulties[0].classList.remove('rock-paper-scissors-difficulty-hover');
   difficulties[1].classList.add('rock-paper-scissors-difficulty-hover');
   difficulties[2].classList.remove('rock-paper-scissors-difficulty-hover');
+  difficulties[3].classList.remove('rock-paper-scissors-difficulty-hover');
+  buttons[3].style.opacity = 0;
+  buttons[3].style.transform = `translate(0, -90px)`;
+  buttons[4].style.opacity = 0;
+  buttons[4].style.transform = `translate(0, -90px)`;
+  list.style.padding = '36px 0 0';
+  list.style.height = '130px';
   reset();
 });
-
 difficulties[2].addEventListener('click', event => {
   difficulty = 3;
   difficulties[0].classList.remove('rock-paper-scissors-difficulty-hover');
   difficulties[1].classList.remove('rock-paper-scissors-difficulty-hover');
   difficulties[2].classList.add('rock-paper-scissors-difficulty-hover');
+  difficulties[3].classList.remove('rock-paper-scissors-difficulty-hover');
+  buttons[3].style.opacity = 0;
+  buttons[3].style.transform = `translate(0, -90px)`;
+  buttons[4].style.opacity = 0;
+  buttons[4].style.transform = `translate(0, -90px)`;
+  list.style.padding = '36px 0 0';
+  list.style.height = '130px';
+  reset();
+});
+difficulties[3].addEventListener('click', event => {
+  difficulty = 4;
+  difficulties[0].classList.remove('rock-paper-scissors-difficulty-hover');
+  difficulties[1].classList.remove('rock-paper-scissors-difficulty-hover');
+  difficulties[3].classList.add('rock-paper-scissors-difficulty-hover');
+  difficulties[2].classList.remove('rock-paper-scissors-difficulty-hover');
+  buttons[3].style.opacity = 1;
+  buttons[3].style.transform = `translate(0, 0)`;
+  buttons[4].style.opacity = 1;
+  buttons[4].style.transform = `translate(0, 0)`;
+  list.style.padding = '36px 0';
+  list.style.height = '222px';
   reset();
 });
 
@@ -51,24 +87,60 @@ buttons[0].addEventListener('click', event => {
   buttons[0].classList.add('rock-paper-scissors-item-hover');
   buttons[1].classList.remove('rock-paper-scissors-item-hover');
   buttons[2].classList.remove('rock-paper-scissors-item-hover');
+  buttons[3].classList.remove('rock-paper-scissors-item-hover');
+  buttons[4].classList.remove('rock-paper-scissors-item-hover');
 });
 buttons[1].addEventListener('click', event => {
   userChoice = 2;
   buttons[1].classList.add('rock-paper-scissors-item-hover');
   buttons[0].classList.remove('rock-paper-scissors-item-hover');
   buttons[2].classList.remove('rock-paper-scissors-item-hover');
+  buttons[3].classList.remove('rock-paper-scissors-item-hover');
+  buttons[4].classList.remove('rock-paper-scissors-item-hover');
 });
 buttons[2].addEventListener('click', event => {
   userChoice = 3;
   buttons[2].classList.add('rock-paper-scissors-item-hover');
   buttons[0].classList.remove('rock-paper-scissors-item-hover');
   buttons[1].classList.remove('rock-paper-scissors-item-hover');
+  buttons[3].classList.remove('rock-paper-scissors-item-hover');
+  buttons[4].classList.remove('rock-paper-scissors-item-hover');
+});
+buttons[3].addEventListener('click', event => {
+  userChoice = 4;
+  buttons[3].classList.add('rock-paper-scissors-item-hover');
+  buttons[0].classList.remove('rock-paper-scissors-item-hover');
+  buttons[1].classList.remove('rock-paper-scissors-item-hover');
+  buttons[2].classList.remove('rock-paper-scissors-item-hover');
+  buttons[4].classList.remove('rock-paper-scissors-item-hover');
+});
+buttons[4].addEventListener('click', event => {
+  userChoice = 5;
+  buttons[4].classList.add('rock-paper-scissors-item-hover');
+  buttons[0].classList.remove('rock-paper-scissors-item-hover');
+  buttons[1].classList.remove('rock-paper-scissors-item-hover');
+  buttons[2].classList.remove('rock-paper-scissors-item-hover');
+  buttons[3].classList.remove('rock-paper-scissors-item-hover');
 });
 
 let pcScore = 0;
 let userScore = 0;
 let tieScore = 0;
+
+// 1 - 2, 5
+// 2 - 3, 5
+// 3 - 1, 4
+// 4 - 1, 2
+// 5 - 3, 4
+
 resultBtn.addEventListener('click', event => {
+  // if (difficulty === 4) {
+  //   let pcChoice = Math.floor(Math.random() * 5) + 1;
+  //   console.log(pcChoice);
+  //   console.log(userChoice);
+
+  // }
+
   let pcChoice = Math.floor(Math.random() * 3) + 1;
   if (difficulty === 1) {
     if (Math.floor(Math.random() * 10) + 1 === 1) {
@@ -102,12 +174,16 @@ resultBtn.addEventListener('click', event => {
         pcChoice = userChoice - 1;
       }
     }
+  } else if (difficulty === 4) {
+    pcChoice = Math.floor(Math.random() * 5) + 1;
   }
-
+  console.log(pcChoice)
   if (
-    (userChoice === 1 && pcChoice === 2) ||
-    (userChoice === 2 && pcChoice === 3) ||
-    (userChoice === 3 && pcChoice === 1)
+    (userChoice === 1 && (pcChoice === 2 || pcChoice === 5)) ||
+    (userChoice === 2 && (pcChoice === 3 || pcChoice === 5)) ||
+    (userChoice === 3 && (pcChoice === 1 || pcChoice === 4)) ||
+    (userChoice === 4 && (pcChoice === 1 || pcChoice === 2)) ||
+    (userChoice === 5 && (pcChoice === 3 || pcChoice === 4))
   ) {
     userScore += 1;
     document.querySelector('.rock-paper-scissors-user').textContent = userScore;
