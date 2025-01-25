@@ -95,7 +95,7 @@ function incrementTopPosition(obstackle, interval, incrementValue) {
   obstackle.style.right = `${obsPosition2}px`;
 }
 
-import imgUrl from './img/coin.png'
+import imgUrl from '../img/coin.png'
 
 let poinTaken = false;
 function incrementRewardPosition(obstackle, interval, incrementValue) {
