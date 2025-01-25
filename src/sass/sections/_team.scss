@@ -92,7 +92,7 @@
   &-btn:last-child {
     background-image: url('../../img/arrow-right.png');
     transform: rotate(180deg);
-    left: 70px;
+    left: calc(50% - 135px);
     top: 36%;
     cursor: pointer;
     @media screen and (min-width: 768px) {
@@ -107,8 +107,7 @@
       background-color: transparent;
       position: absolute;
       top: 35%;
-      left: 150px;
-      transform: translateY(-50%);
+      left: calc(50% - 335px);
       transform: rotate(180deg);
     }
     @media screen and (min-width: 1200px) {
@@ -122,7 +121,7 @@
       background-color: transparent;
       position: absolute;
       top: 35%;
-      left: 250px;
+      left: calc(50% - 405px);
       transform: translateY(-50%);
       transform: rotate(180deg);
     }
@@ -139,7 +138,9 @@
     background-color: transparent;
     position: absolute;
     top: 45%;
-    transform: translateY(-50%);
+    right: calc(50% - 135px);
+    transform: translateY(-60%);
+
     @media screen and (min-width: 768px) {
       cursor: pointer;
       background-image: url('../../img/arrow-right.png');
@@ -148,8 +149,7 @@
       border: none;
       background-color: transparent;
       position: absolute;
-      right: 150px;
-      transform: translateY(-50%);
+      right: calc(50% - 335px);
     }
 
     @media screen and (min-width: 1200px) {
@@ -163,8 +163,7 @@
       background-color: transparent;
       position: absolute;
       top: 50%;
-      right: 250px;
-      transform: translateY(-50%);
+      right: calc(50% - 405px);
     }
   }
 
