@@ -20,12 +20,17 @@
     }
   }
 
+  &-text {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
   &-box {
     display: block;
     margin: auto;
     
     height: 220px;
-
+    width: 300px;
     border-radius: 37px;
     border: 2px solid #000;
     background: #5ABB58;
@@ -121,7 +126,8 @@ left: 17%;
 width: 200px;
 height: 300px;
 font-size: 14px;
-background-color: floralwhite;
+// background-color: floralwhite;
+background-color: #8ACECF;
 text-align: center;
 display: none;
 
@@ -143,11 +149,16 @@ display: none;
 
 .football-end-text {
   margin-top: 50px;
-  color: #5ABB58;
+  // color: #5ABB58;
+  color: #fff;
 }
 
 .football-end-btn {
+  color: #8ACECF;
   margin-top: 30px;
+  font-size: 14px;
   padding: 10px;
-  background-color: aquamarine;
+  // background-color: aquamarine;
+  background-color: #000;
+  border-radius: 20px;
 }
