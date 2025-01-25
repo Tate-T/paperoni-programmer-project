@@ -18,6 +18,9 @@ const allTitleH1 = document.querySelectorAll('h1');
 const allTitleH2 = document.querySelectorAll('h2');
 const allTitleH3 = document.querySelectorAll('h3');
 
+import imgUrl from '../img/sun.svg'
+import imgUrl2 from '../img/moon.svg'
+
 dropdownBtn.addEventListener('click', () => {
   dropdownList.classList.toggle('show');
 });
@@ -27,7 +30,7 @@ cirkle.addEventListener('click', event => {
 
   if (cirkle.classList.contains('header-cirkle-right')) {
     body.style.backgroundColor = '#8a8a8a';
-    img.src = '../img/moon.svg';
+    img.src = imgUrl2;
     cirkle.style.backgroundColor = 'black';
     elipse.style.backgroundColor = '#FFF';
 
@@ -71,7 +74,7 @@ cirkle.addEventListener('click', event => {
   } else {
     img;
      body.style.backgroundColor = "white"
-    img.src = '../img/sun.svg';
+    img.src = imgUrl;
     cirkle.style.backgroundColor = 'white';
     elipse.style.backgroundColor = '#7a7a7a';
 
