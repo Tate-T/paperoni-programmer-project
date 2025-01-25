@@ -12,4 +12,3 @@ import "./our-js/max-number.js";
 import "./our-js/team.js";
 import "./our-js/scientists.js";
 import "./our-js/space.js";
-import "./our-js/footer.js";
