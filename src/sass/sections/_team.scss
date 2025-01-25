@@ -81,7 +81,7 @@
     cursor: pointer;
     width: 50px;
     height: 100px;
-    background-image: url('../../img/arrow-right.png');
+    background-image: url('./img/arrow-right.png');
     background-repeat: no-repeat;
     background-size: 100%;
     border: none;
@@ -90,7 +90,7 @@
     right: 70px;
   }
   &-btn:last-child {
-    background-image: url('../../img/arrow-right.png');
+    background-image: url('./img/arrow-right.png');
     transform: rotate(180deg);
     left: calc(50% - 135px);
     top: 36%;
@@ -100,7 +100,7 @@
       height: 60px;
 
       cursor: pointer;
-      background-image: url('../../img/arrow-right.png');
+      background-image: url('./img/arrow-right.png');
       background-repeat: no-repeat;
       background-size: cover;
       border: none;
@@ -114,7 +114,7 @@
       cursor: pointer;
       width: 50px;
       height: 100px;
-      background-image: url('../../img/arrow-right.png');
+      background-image: url('./img/arrow-right.png');
       background-repeat: no-repeat;
       background-size: cover;
       border: none;
@@ -131,7 +131,7 @@
 
     width: 30px;
     height: 60px;
-    background-image: url('../../img/arrow-right.png');
+    background-image: url('./img/arrow-right.png');
     background-repeat: no-repeat;
     background-size: cover;
     border: none;
@@ -143,7 +143,7 @@
 
     @media screen and (min-width: 768px) {
       cursor: pointer;
-      background-image: url('../../img/arrow-right.png');
+      background-image: url('./img/arrow-right.png');
       background-repeat: no-repeat;
       background-size: cover;
       border: none;
@@ -156,7 +156,7 @@
       cursor: pointer;
       width: 50px;
       height: 100px;
-      background-image: url('../../img/arrow-right.png');
+      background-image: url('./img/arrow-right.png');
       background-repeat: no-repeat;
       background-size: cover;
       border: none;
