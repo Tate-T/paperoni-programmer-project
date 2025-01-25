@@ -22,6 +22,7 @@ const buttons = document.querySelectorAll('.rock-paper-scissors-item');
 const resultBtn = document.querySelector('.rock-paper-scissors-button');
 const resultText = document.querySelector('.rock-paper-scissors-text');
 const list = document.querySelector('.rock-paper-scissors-list');
+const info = document.querySelector('.rock-paper-scissors-info');
 let userChoice = 0;
 let difficulty = 2;
 
@@ -33,10 +34,17 @@ difficulties[0].addEventListener('click', event => {
   difficulties[3].classList.remove('rock-paper-scissors-difficulty-hover');
   buttons[3].style.opacity = 0;
   buttons[3].style.transform = `translate(0, -90px)`;
+  buttons[3].style.zIndex = `-1`;
   buttons[4].style.opacity = 0;
   buttons[4].style.transform = `translate(0, -90px)`;
-  list.style.padding = '36px 0 0';
-  list.style.height = '130px';
+  buttons[4].style.zIndex = `-1`;
+  list.style.padding = '170px 0 24px';
+  list.style.height = '240px';
+  info.style.top = "390px"
+  if (window.screen.width >= 768) {
+    list.style.padding = '36px 0 0';
+    list.style.height = '130px';
+  }
   reset();
 });
 difficulties[1].addEventListener('click', event => {
@@ -47,10 +55,17 @@ difficulties[1].addEventListener('click', event => {
   difficulties[3].classList.remove('rock-paper-scissors-difficulty-hover');
   buttons[3].style.opacity = 0;
   buttons[3].style.transform = `translate(0, -90px)`;
+  buttons[3].style.zIndex = `-1`;
   buttons[4].style.opacity = 0;
   buttons[4].style.transform = `translate(0, -90px)`;
-  list.style.padding = '36px 0 0';
-  list.style.height = '130px';
+  buttons[4].style.zIndex = `-1`;
+  list.style.padding = '170px 0 24px';
+  list.style.height = '240px'; 
+  info.style.top = "390px"
+  if (window.screen.width >= 768) {
+    list.style.padding = '36px 0 0';
+    list.style.height = '130px';
+  }
   reset();
 });
 difficulties[2].addEventListener('click', event => {
@@ -61,10 +76,17 @@ difficulties[2].addEventListener('click', event => {
   difficulties[3].classList.remove('rock-paper-scissors-difficulty-hover');
   buttons[3].style.opacity = 0;
   buttons[3].style.transform = `translate(0, -90px)`;
+  buttons[3].style.zIndex = `-1`;
   buttons[4].style.opacity = 0;
   buttons[4].style.transform = `translate(0, -90px)`;
-  list.style.padding = '36px 0 0';
-  list.style.height = '130px';
+  buttons[4].style.zIndex = `-1`;
+  list.style.padding = '170px 0 24px';
+  list.style.height = '240px'; 
+  info.style.top = "390px"
+  if (window.screen.width >= 768) {
+    list.style.padding = '36px 0 0';
+    list.style.height = '130px';
+  }
   reset();
 });
 difficulties[3].addEventListener('click', event => {
@@ -75,10 +97,18 @@ difficulties[3].addEventListener('click', event => {
   difficulties[2].classList.remove('rock-paper-scissors-difficulty-hover');
   buttons[3].style.opacity = 1;
   buttons[3].style.transform = `translate(0, 0)`;
+  buttons[3].style.zIndex = `1`;
   buttons[4].style.opacity = 1;
   buttons[4].style.transform = `translate(0, 0)`;
-  list.style.padding = '36px 0';
-  list.style.height = '222px';
+  buttons[4].style.zIndex = `1`;  
+  list.style.padding = '170px 0 24px';
+  list.style.height = '340px'; 
+  info.style.top = "490px"
+  if (window.screen.width >= 768) {
+  info.style.top = "390px"
+    list.style.padding = '36px 0';
+    list.style.height = '222px';
+  }
   reset();
 });
 
@@ -177,7 +207,7 @@ resultBtn.addEventListener('click', event => {
   } else if (difficulty === 4) {
     pcChoice = Math.floor(Math.random() * 5) + 1;
   }
-  console.log(pcChoice)
+  console.log(pcChoice);
   if (
     (userChoice === 1 && (pcChoice === 2 || pcChoice === 5)) ||
     (userChoice === 2 && (pcChoice === 3 || pcChoice === 5)) ||
