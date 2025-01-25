@@ -57,8 +57,10 @@
     }
 
     &-link {
-        // color: #000;
-        // color: inherit;
+        display: none;
+        @media screen and (min-width: 480px) {
+            display: block;
+        }
     }
 
     
@@ -69,29 +71,36 @@
 
     &-dropdown-content {
         opacity: 0; 
-        visibility: hidden; 
         transition: opacity 1s ease; 
         position: absolute;
         top: 30px;
-        left: -45px;
+        left: 30px;
         list-style: none;
         text-align: center;
-        width: 180px;
-        // z-index: 999;
-        
-        // background-color: aquamarine; 
-    
-
+        // width: 180px;
+        background-color: white;
+        overflow: hidden;
+        @media screen and (min-width: 380px) {
+            top: 30px;
+            left: 70px;
+        }
+        @media screen and (min-width: 480px) {
+            top: 30px;
+            left: -10px;
+            width: 180px;
+        }
+        @media screen and (min-width: 768px) {
+            top: 30px;
+            left: -45px;
+        }
     }
 
     &-dropdown-content.show {
         opacity: 1;
         visibility: visible;
-
     }    
 
     &-dropdown-item {
-        // color: #000;
         font-size: 10px;
         font-weight: 400;
         line-height: normal;
@@ -99,14 +108,22 @@
         padding: 5px 35px;
         border-right: 1px solid #000;
         border-left: 1px solid #000;
-        // background: #FFF;
-
         cursor: pointer;
 
        
         @media screen and (min-width: 768px) {
             font-size: 12px;
             padding: 10px 35px;
+        }
+    }
+
+    &-dropdown-item-one {
+        margin-left: 40px;
+        @media screen and (min-width: 380px) {
+            margin-left: 100px;
+        }
+        @media screen and (min-width: 480px) {
+            margin-left: 0;
         }
     }
 
@@ -167,11 +184,11 @@
       }
     
       &-cirkle-right {
-        
-        @media screen and (min-width: 330px) {
-            transform: translate(20px);
-            transition: transform background-color $st-animation;
-        }
+        transform: translate(20px);
+        transition: transform background-color $st-animation;
+        // @media screen and (min-width: 330px) {
+            
+        // }
       }
     
       &-hello {
