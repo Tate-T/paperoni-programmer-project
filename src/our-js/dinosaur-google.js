@@ -153,10 +153,3 @@ btn.addEventListener('click', event => {
     );
   }
 });
-
-// ArrowUp
-// ArrowDown
-// ArrowLeft
-// ArrowRight
-// Space
-// Enter
