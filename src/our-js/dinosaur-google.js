@@ -110,7 +110,7 @@ function incrementRewardPosition(obstackle, interval, incrementValue) {
     setTimeout(function () {
       poinTaken = false;
       obstackle.innerHTML =
-        '<img class="google-dino-image" src="./img/coin.png" alt="coin">';
+        '<img class="google-dino-image" src="/img/coin.png" alt="coin">';
     }, 3000);
   }
   if (rewardPosition >= 730) {
