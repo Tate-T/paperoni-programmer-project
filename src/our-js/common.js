@@ -64,6 +64,7 @@ intoductoryBtn.addEventListener('click', event => {
 
 nothingBtn.addEventListener('click', event => {
   numerical.forEach(section => (section.style.display = 'block'));
+  special.style.display = 'flex';
   playable.forEach(section => (section.style.display = 'block'));
   introductory.forEach(section => (section.style.display = 'block'));
   bg.style.height = `4000px`;
