@@ -23,6 +23,7 @@ const resultBtn = document.querySelector('.rock-paper-scissors-button');
 const resultText = document.querySelector('.rock-paper-scissors-text');
 const list = document.querySelector('.rock-paper-scissors-list');
 const info = document.querySelector('.rock-paper-scissors-info');
+const choice = document.querySelector('.rock-paper-scissors-choice');
 let userChoice = 0;
 let difficulty = 2;
 
@@ -209,6 +210,17 @@ resultBtn.addEventListener('click', event => {
     }
   } else if (difficulty === 4) {
     pcChoice = Math.floor(Math.random() * 5) + 1;
+  }
+  if (pcChoice === 1) {
+    choice.textContent = "Комп'ютер обрав камінь";
+  } else if (pcChoice === 2) {
+    choice.textContent = "Комп'ютер обрав ножиці";
+  } else if (pcChoice === 3) {
+    choice.textContent = "Комп'ютер обрав папір";
+  } else if (pcChoice === 4) {
+    choice.textContent = "Комп'ютер обрав факел";
+  } else if (pcChoice === 5) {
+    choice.textContent = "Комп'ютер обрав стакан з водою";
   }
   console.log(pcChoice);
   if (
