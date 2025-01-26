@@ -66,7 +66,7 @@ function checkGameOver() {
 }
 
 let gameStarted = false; 
-
+import imgUrl1 from '/space-assets/spaceship.png';
 
 class Player {
   constructor() {
@@ -74,7 +74,7 @@ class Player {
     this.rotation = 0;
     this.opacity = 1;
     const image = new Image();
-    image.src = './space-assets/spaceship.png';
+    image.src = imgUrl1;
     image.onload = () => {
       const scale = 0.15;
       this.image = image;
@@ -189,12 +189,13 @@ class InvaderProjectile {
   }
 }
 
+import imgUrl2 from '/space-assets/invader.png';
 
 class Invader {
   constructor({ position }) {
     this.velocity = { x: 0, y: 0 };
     const image = new Image();
-    image.src = './space-assets/invader.png';
+    image.src = imgUrl2;
     image.onload = () => {
       const scale = 1;
       this.image = image;

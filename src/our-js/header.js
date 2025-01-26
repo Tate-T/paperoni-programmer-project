@@ -17,21 +17,27 @@ const allLink = document.querySelectorAll('a');
 const allTitleH1 = document.querySelectorAll('h1');
 const allTitleH2 = document.querySelectorAll('h2');
 const allTitleH3 = document.querySelectorAll('h3');
+const headerDropdawn = document.querySelector('.header-dropdown-content');
 
 dropdownBtn.addEventListener('click', () => {
   dropdownList.classList.toggle('show');
 });
+
+import imgUrl from '/img/moon.svg';
+import imgUrl2 from '/img/sun.svg';
 
 cirkle.addEventListener('click', event => {
   cirkle.classList.toggle('header-cirkle-right');
 
   if (cirkle.classList.contains('header-cirkle-right')) {
     body.style.backgroundColor = '#8a8a8a';
-    img.src = '../img/moon.svg';
+    img.src = imgUrl;
     cirkle.style.backgroundColor = 'black';
     elipse.style.backgroundColor = '#FFF';
 
     elipseCalcul.style.backgroundColor = '#FFF';
+    // headerDropdawn.style.backgroundColor = '#FFF';
+    headerDropdawn.style.backgroundColor = '#8a8a8a';
 
     allText.forEach(text => {
       text.classList.toggle('all-text-white');
@@ -70,12 +76,14 @@ cirkle.addEventListener('click', event => {
     });
   } else {
     img;
-     body.style.backgroundColor = "white"
-    img.src = '../img/sun.svg';
+    body.style.backgroundColor = 'white';
+    img.src = imgUrl2;
     cirkle.style.backgroundColor = 'white';
     elipse.style.backgroundColor = '#7a7a7a';
 
     elipseCalcul.style.backgroundColor = '#7a7a7a';
+    // headerDropdawn.style.backgroundColor = '#7a7a7a';
+    headerDropdawn.style.backgroundColor = '#FFF';
 
     allText.forEach(text => {
       text.classList.toggle('all-text-white');
