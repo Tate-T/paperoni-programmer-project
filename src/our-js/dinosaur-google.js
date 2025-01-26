@@ -96,8 +96,6 @@ function incrementTopPosition(obstackle, interval, incrementValue) {
 }
 
 let poinTaken = false;
-import imgUrl from '/img/coin.png';
-
 function incrementRewardPosition(obstackle, interval, incrementValue) {
   if (rewardPosition <= 0 || rewardPosition >= 680) {
     obstackle.style.opacity = 0;
@@ -112,7 +110,7 @@ function incrementRewardPosition(obstackle, interval, incrementValue) {
     setTimeout(function () {
       poinTaken = false;
       obstackle.innerHTML =
-        `<img class="google-dino-image" src="${imgUrl}" alt="coin">`;
+        '<img class="google-dino-image" src="./img/coin.png" alt="coin">';
     }, 3000);
   }
   if (rewardPosition >= 730) {
@@ -155,3 +153,10 @@ btn.addEventListener('click', event => {
     );
   }
 });
+
+// ArrowUp
+// ArrowDown
+// ArrowLeft
+// ArrowRight
+// Space
+// Enter
