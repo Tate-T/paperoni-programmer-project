@@ -67,7 +67,7 @@ nothingBtn.addEventListener('click', event => {
   special.style.display = 'flex';
   playable.forEach(section => (section.style.display = 'block'));
   introductory.forEach(section => (section.style.display = 'block'));
-  bg.style.height = `4000px`;
+  bg.style.height = `4200px`;
   if (window.screen.width <= 1200) {
     bg.style.height = `4200px`;
   }
